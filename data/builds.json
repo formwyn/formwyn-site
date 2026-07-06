@@ -63,7 +63,139 @@
       "core": "Charged Bolts, Flame Shield (Flash), Unstable Currents (Boundless), Ceaseless Conduit. Sustained burst, forgiving.",
       "narrator": "This one doesn't build up to a big hit. It just never stops hitting. Meet **The Overcharge**.",
       "slug": "the-overcharge",
-      "classSlug": "sorcerer"
+      "classSlug": "sorcerer",
+      "fullDetail": {
+        "detailFreshness": "Provisional",
+        "detailNote": "Skill, gear, and Paragon detail below is sourced from Icy Veins' Crackling Energy Sorcerer guide, last updated May 17, 2026 - before Season 14 launched (June 30, 2026). The underlying skills/aspects/Talisman system haven't had a season-specific rework announced, so the build's core identity is likely unchanged, but this hasn't been directly re-confirmed for Season 14 yet. Treat as a strong starting point, not gospel - we'll upgrade this to Confirmed once a Season 14-dated source verifies it. Exact numeric skill-tree point allocations aren't included here: Icy Veins renders their skill planner as an interactive graphic rather than text, so we can't reliably transcribe precise point counts per skill without risking errors - what's listed below is which skills matter and why, which we can verify with confidence.",
+        "skillBar": [
+          {
+            "skill": "Charged Bolts",
+            "role": "Main spam skill - stand close to elites/bosses to hit with all bolts at once. Triggers Aspect of Elemental Attunement and the Boundless mechanic on Unstable Currents."
+          },
+          {
+            "skill": "Flame Shield",
+            "role": "Defensive skill modified by Flash - generates Crackling Energy rapidly while granting Movement Speed and Dodge Chance."
+          },
+          {
+            "skill": "Ice Armor",
+            "role": "Grants a large Barrier, bonus Armor, and Unstoppable. Refreshes on hitting enough enemies - keep it up as much as possible."
+          },
+          {
+            "skill": "Teleport",
+            "role": "Mobility and enemy-grouping tool via Raiment of the Infinite - pulls enemies toward you on cast."
+          },
+          {
+            "skill": "Frost Nova",
+            "role": "Generates Mana, applies Vulnerable, and Freezes enemies - Frozen targets shatter via Azurewrath."
+          },
+          {
+            "skill": "Unstable Currents",
+            "role": "Ultimate - automatically triggers Chain Lightning, Lightning Spear, and Ball Lightning (do not equip these three on the bar directly)."
+          }
+        ],
+        "keyPassives": [
+          "Ceaseless Conduit - sustaining Crackling Energy charges even at high Attack Speed maintains a 4x damage multiplier; this is the build's core damage engine.",
+          "Enchantment Master - slot Ball Lightning in the first Enchantment Slot (triggered by Charged Bolts hits) and Teleport in the second for extra mobility."
+        ],
+        "gear": [
+          {
+            "slot": "Staff",
+            "aspect": "Aspect of Armageddon",
+            "effect": "Your Ultimate Skill grants 150-225% increased damage of its element type while active."
+          },
+          {
+            "slot": "Amulet",
+            "aspect": "Esadora's Overflowing Cameo (required Unique)",
+            "effect": "Crackling Energy's discharge rate scales with Attack Speed, damage increased 100-120%, 25% chance per hit to reduce a random Cooldown by 1s."
+          },
+          {
+            "slot": "Ring 1",
+            "aspect": "Aspect of Elemental Attunement",
+            "effect": "Lucky Hit: up to 20% chance to reduce a Defensive Skill's Cooldown by 8-10 seconds."
+          },
+          {
+            "slot": "Ring 2 or Gloves",
+            "aspect": "Aspect of Overwhelming Currents",
+            "effect": "Shock Skill Critical Strikes grant 2-3% Shock damage for 4s (stacking, non-refreshing)."
+          },
+          {
+            "slot": "Ring 2 or Gloves",
+            "aspect": "Shivering Aspect",
+            "effect": "Enemies take up to 60-90% increased damage based on Chill/Stagger built up."
+          },
+          {
+            "slot": "Helm",
+            "aspect": "Aspect of Heavenly Strength (replaced by Harlequin Crest or Heir of Perdition once obtained)",
+            "effect": "30-40% Damage Reduction while wielding a Two-Handed Weapon."
+          },
+          {
+            "slot": "Chest",
+            "aspect": "Snowveiled Aspect (replaced by Raiment of the Infinite once obtained)",
+            "effect": "20-30% Damage Reduction while you have a Barrier active."
+          },
+          {
+            "slot": "Pants",
+            "aspect": "Mage-Lord's Aspect",
+            "effect": "30-45% Damage Reduction for 6s after dealing Shock damage to Close enemies."
+          },
+          {
+            "slot": "Boots",
+            "aspect": "Aspect of Shredding Blades (Esu's Heirloom optional)",
+            "effect": "Conjuration damage applies Vulnerable for 4s; deal 15-20% increased damage to Vulnerable enemies."
+          }
+        ],
+        "statPriority": [
+          {
+            "slot": "Staff",
+            "priority": "Critical Strike Damage Multiplier > Intelligence/Max Life/Lightning Damage/All Damage/Weapon Damage > Resource Cost Reduction"
+          },
+          {
+            "slot": "Helm",
+            "priority": "Cooldown Reduction, Resource Cost Reduction > Intelligence/Max Life/Resistances/Armor"
+          },
+          {
+            "slot": "Chest",
+            "priority": "Resource Cost Reduction > Intelligence/Max Life/Resistances/Armor"
+          },
+          {
+            "slot": "Gloves",
+            "priority": "Crit Chance/Attack Speed/Crit Damage > Vulnerable Damage/Lightning Damage/CDR > Intelligence/Max Life/Resistances/Armor"
+          },
+          {
+            "slot": "Pants",
+            "priority": "Intelligence/Max Life/Resistances/Armor/Dodge Chance"
+          },
+          {
+            "slot": "Boots",
+            "priority": "Movement Speed > Evade Charges > Intelligence/Max Life/Resistances/Armor"
+          },
+          {
+            "slot": "Amulet",
+            "priority": "Ranks to Shock/All Skills, Crit Chance, Attack Speed, Crit Damage > Vulnerable Damage/Lightning Damage/CDR"
+          },
+          {
+            "slot": "Rings",
+            "priority": "Crit Chance/Attack Speed/Crit Damage > Vulnerable Damage/Lightning Damage/CDR"
+          }
+        ],
+        "gems": {
+          "weapon": "Grand Topaz (Lightning Damage)",
+          "armor": "Grand Topaz (Intelligence)",
+          "jewelry": "Grand Diamond (Resistance to All Elements)"
+        },
+        "runewords": [
+          "Cir + Vex - builds Offering by casting skills, then spends it for +1 to all Skills for 10s.",
+          "Yul + Mot - builds Offering on cooldown-skill casts, then spends it to gain a damage-reducing shadow."
+        ],
+        "talisman": [
+          "Prioritize a Legendary Seal with a +1 Charm Slot affix (6 total Charm slots).",
+          "Insert all 5 pieces of Cain's Wild Lightning (more area damage) or Tal Rasha's Threefold Way (more defense) - prioritize Charms with extra Ranks to Shock Skills.",
+          "Insert Azurewrath to explode enemies Frozen by Frost Nova."
+        ],
+        "sources": [
+          "Icy Veins - Crackling Energy Sorcerer Build (updated May 17, 2026, pre-Season 14)"
+        ]
+      }
     },
     {
       "cls": "Sorcerer",

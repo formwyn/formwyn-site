@@ -38,12 +38,75 @@ function iconBadge(cls) {
   return '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>';
 }
 
+function fullDetailSection(detail) {
+  const detailFreshBadge = freshnessBadge(detail.detailFreshness === 'Confirmed' ? 'Confirmed' : 'Provisional');
+
+  const skillBarItems = (detail.skillBar || []).map(function (s) {
+    return '<li><strong>' + s.skill + '</strong> &mdash; ' + s.role + '</li>';
+  }).join('\n');
+
+  const passiveItems = (detail.keyPassives || []).map(function (p) {
+    return '<li>' + p + '</li>';
+  }).join('\n');
+
+  const gearRows = (detail.gear || []).map(function (g) {
+    return [
+      '<tr>',
+      '<td class="tier-cell">' + g.slot + '</td>',
+      '<td>' + g.aspect + '</td>',
+      '<td class="meta">' + g.effect + '</td>',
+      '</tr>',
+    ].join('');
+  }).join('\n');
+
+  const statRows = (detail.statPriority || []).map(function (s) {
+    return [
+      '<tr>',
+      '<td class="tier-cell">' + s.slot + '</td>',
+      '<td class="meta">' + s.priority + '</td>',
+      '</tr>',
+    ].join('');
+  }).join('\n');
+
+  const gemsLine = detail.gems
+    ? '<p class="core"><strong>Gems:</strong> Weapon &mdash; ' + detail.gems.weapon + '. Armor &mdash; ' + detail.gems.armor + '. Jewelry &mdash; ' + detail.gems.jewelry + '.</p>'
+    : '';
+
+  const runewordItems = (detail.runewords || []).map(function (r) { return '<li>' + r + '</li>'; }).join('\n');
+  const talismanItems = (detail.talisman || []).map(function (t) { return '<li>' + t + '</li>'; }).join('\n');
+
+  return [
+    '<h2>Full build detail</h2>',
+    '<div class="reveal-card">',
+    '  ' + detailFreshBadge,
+    '  <p class="core" style="margin-top:0.8rem;">' + detail.detailNote + '</p>',
+    '</div>',
+    '<h2>Skill bar</h2>',
+    '<ul>' + skillBarItems + '</ul>',
+    passiveItems ? '<h2>Key passives</h2><ul>' + passiveItems + '</ul>' : '',
+    '<h2>Gear &amp; aspects</h2>',
+    '<table class="freshness-table">',
+    '<thead><tr><th>Slot</th><th>Aspect / Unique</th><th>Effect</th></tr></thead>',
+    '<tbody>' + gearRows + '</tbody>',
+    '</table>',
+    '<h2>Stat priority</h2>',
+    '<table class="freshness-table">',
+    '<thead><tr><th>Slot</th><th>Priority (highest first)</th></tr></thead>',
+    '<tbody>' + statRows + '</tbody>',
+    '</table>',
+    gemsLine,
+    runewordItems ? '<h2>Runewords</h2><ul>' + runewordItems + '</ul>' : '',
+    talismanItems ? '<h2>Talisman (Seal &amp; Charms)</h2><ul>' + talismanItems + '</ul>' : '',
+    detail.sources ? '<p class="tagline"><strong>Sources:</strong> ' + detail.sources.join(' &middot; ') + '</p>' : '',
+  ].join('\n');
+}
+
 function buildPage(b) {
   const freshnessLine = b.freshness === 'Confirmed'
     ? 'Verified for Season 14 - last checked ' + b.last_checked + '.'
     : 'Early-season pick, still settling in - last checked ' + b.last_checked + '.';
 
-  const body = [
+  const bodyParts = [
     '<p><a href="/classes/' + b.classSlug + '.html">&larr; All ' + b.cls + ' builds</a></p>',
     '<h1>' + iconBadge(b.cls) + ' ' + b.name + '</h1>',
     '<div class="reveal-card">',
@@ -51,13 +114,17 @@ function buildPage(b) {
     '  <p class="core">' + b.core + '</p>',
     '  ' + freshnessBadge(b.freshness),
     '</div>',
-  ].join('\n');
+  ];
+
+  if (b.fullDetail) {
+    bodyParts.push(fullDetailSection(b.fullDetail));
+  }
 
   return pageShell({
     title: b.name,
     description: b.name + ' - a ' + b.cls + ' build for Diablo 4, ' + freshnessLine,
     active: 'all-builds',
-    body: body,
+    body: bodyParts.join('\n'),
   });
 }
 
