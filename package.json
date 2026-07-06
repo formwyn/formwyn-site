@@ -1,0 +1,9 @@
+{
+  "name": "formwyn-site",
+  "private": true,
+  "version": "1.0.0",
+  "engines": { "node": "20.x" },
+  "scripts": {
+    "generate": "node scripts/generate-pages.js"
+  }
+}

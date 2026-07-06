@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Get my build · Formwyn</title>
+<meta name="description" content="Tell Formwyn how you want to feel in Diablo 4 and get a verified, current-season build back.">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <a class="brand" href="/">Formwyn</a>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/get-my-build.html" class="active">Get my build</a>
+    <a href="/tier-lists.html">Tier lists</a>
+    <a href="/classes.html">All builds</a>
+    <a href="/guides.html">Guides</a>
+  </nav>
+</header>
+
+<h1>Tell it what you want to play.</h1>
+<p class="tagline">Not a tier list. Not a wiki. Describe the character in your head — Formwyn hands back a real, verified build for the current season.</p>
+
+<div class="ask-box">
+  <form id="ask-form">
+    <textarea id="ask-text" placeholder="e.g. I want to feel like a glass cannon but never actually die." required></textarea>
+    <div>
+      <button id="ask-button" type="submit">Reveal my build</button>
+    </div>
+    <p class="hint">No idea what you want? Leave it vague — you'll get something to start with, and you can always ask again.</p>
+  </form>
+  <div id="reveal-container"></div>
+</div>
+
+<p><a href="/classes.html">Or browse all 36 verified builds by class &rarr;</a></p>
+
+<footer class="site">
+  <p>Formwyn — Diablo 4 build guidance, verified for the current season. Not affiliated with Blizzard Entertainment.</p>
+  <p><a href="/patch-tracker.html">Data freshness &amp; patch tracker</a></p>
+</footer>
+</div>
+<script src="/app.js"></script>
+</body>
+</html>

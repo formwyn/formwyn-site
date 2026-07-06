@@ -1,0 +1,620 @@
+{
+  "builds": [
+    {
+      "cls": "Sorcerer",
+      "name": "The Long Burn",
+      "feel": [
+        "DOT"
+      ],
+      "range": "RANGED",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Firewall (Ring of Fire), Pyromancy skills to keep Heat maxed. Sustained DoT pressure, positioning over reflexes.",
+      "narrator": "Some players don't want to swing for the fences. They'd rather build something that just doesn't stop. Meet **The Long Burn**.",
+      "slug": "the-long-burn",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Sorcerer",
+      "name": "The Comet",
+      "feel": [
+        "BURST",
+        "SINGLE_TARGET"
+      ],
+      "range": "RANGED",
+      "complexity": "HIGH",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Starfall Coronet + Air Burst Meteor, Tal Rasha's Iridescent Loop, Raiment of the Infinite. Maximum single-target burst.",
+      "narrator": "One meteor, one good look at the sky \u2014 same plan as always, it just hits harder this season. Meet **The Comet**.",
+      "slug": "the-comet",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Sorcerer",
+      "name": "The Stillpoint",
+      "feel": [
+        "AOE"
+      ],
+      "range": "RANGED",
+      "complexity": "HIGH",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Ice Shards + Shatter Frost Nova, Signet of Pelghain, Azurewrath, Hail of Verglas. AoE clear with real crowd control.",
+      "narrator": "Ice Shards won't freeze a thing on its own. Everything standing around it will. Meet **The Stillpoint**.",
+      "slug": "the-stillpoint",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Sorcerer",
+      "name": "The Overcharge",
+      "feel": [
+        "BURST"
+      ],
+      "range": "RANGED",
+      "complexity": "LOW",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Charged Bolts, Flame Shield (Flash), Unstable Currents (Boundless), Ceaseless Conduit. Sustained burst, forgiving.",
+      "narrator": "This one doesn't build up to a big hit. It just never stops hitting. Meet **The Overcharge**.",
+      "slug": "the-overcharge",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Sorcerer",
+      "name": "The Storm Front",
+      "feel": [
+        "MOBILE"
+      ],
+      "range": "RANGED",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-05",
+      "core": "Ball Lightning, Unstable Currents, Teleport, Harlequin Crest. High mobility, hit-and-run damage.",
+      "narrator": "Standing still is a mistake you don't plan on making twice. Not everyone's finished proving that yet, though. Meet **The Storm Front**.",
+      "slug": "the-storm-front",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Sorcerer",
+      "name": "The Ember",
+      "feel": [
+        "AOE"
+      ],
+      "range": "RANGED",
+      "complexity": "LOW",
+      "audience": "BEGINNER",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Incinerate (Flamethrower), Hydra, Familiar, Ice Armor, Teleport. Leveling 1-70, mana-efficient.",
+      "narrator": "Nobody needs the fancy version on day one. Meet **The Ember** \u2014 small, steady, and it doesn't ask much of you.",
+      "slug": "the-ember",
+      "classSlug": "sorcerer"
+    },
+    {
+      "cls": "Barbarian",
+      "name": "The Wrecking Ball",
+      "feel": [
+        "AOE"
+      ],
+      "range": "MELEE",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Whirlwind, Tibault's Will, Gohr's Devastating Grips, Ring of Starless Skies. Near one-button AoE clear.",
+      "narrator": "Splash damage, constant motion, never standing still long enough to get hit. Meet **The Wrecking Ball**. Whirlwind never stops. Neither do you.",
+      "slug": "the-wrecking-ball",
+      "classSlug": "barbarian"
+    },
+    {
+      "cls": "Barbarian",
+      "name": "The War Council",
+      "feel": [
+        "BURST"
+      ],
+      "range": "HYBRID",
+      "complexity": "HIGH",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Challenging Shout, War Cry, Mighty Throw + Call of the Ancients double-ultimate loop. Highest sustained damage.",
+      "narrator": "You don't swing the biggest weapon here. You just tell the biggest things in the room to swing it for you. Meet **The War Council**.",
+      "slug": "the-war-council",
+      "classSlug": "barbarian"
+    },
+    {
+      "cls": "Barbarian",
+      "name": "The Battering Ram",
+      "feel": [
+        "MOBILE",
+        "DOT"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Charge, Chainscourged Mail, Cremator's Aspect, Writhing Aspect. Fast, aggressive, movement-heavy.",
+      "narrator": "Some players want to hit once. You'd rather hit everything on the way there. Meet **The Battering Ram**.",
+      "slug": "the-battering-ram",
+      "classSlug": "barbarian"
+    },
+    {
+      "cls": "Barbarian",
+      "name": "The Long Cut",
+      "feel": [
+        "DOT",
+        "MOBILE"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Rend + Leap, Wanton Rupture Aspect, Ring of the Ravenous, Shattered Vow. Kite and stack bleed.",
+      "narrator": "No big swing, no dramatic finish. Just a cut that keeps going long after you've moved on. Meet **The Long Cut**.",
+      "slug": "the-long-cut",
+      "classSlug": "barbarian"
+    },
+    {
+      "cls": "Barbarian",
+      "name": "The Anvil",
+      "feel": [
+        "AOE"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Hammer of the Ancients, generatorless, Aspect of Echoing Fury, Mantle of Mountain's Fury. Straightforward slam.",
+      "narrator": "Some things don't need reinventing. Meet **The Anvil** \u2014 one hammer, one generator-free rotation.",
+      "slug": "the-anvil",
+      "classSlug": "barbarian"
+    },
+    {
+      "cls": "Druid",
+      "name": "The Blender",
+      "feel": [
+        "AOE",
+        "MOBILE",
+        "TANKY"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Shred (Storm), Ifeh's Dire Totem, Malefic Crescent, Beru of the Storm Shepherd. Fast, mobile, tanky melee AoE.",
+      "narrator": "Some players want to hit hard. You'd rather hit everything, at once, while never really slowing down. Meet **The Blender**.",
+      "slug": "the-blender",
+      "classSlug": "druid"
+    },
+    {
+      "cls": "Druid",
+      "name": "The Downpour",
+      "feel": [
+        "AOE",
+        "BURST"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Lightning Storm, Azurewrath, Might of the Ursine, Storm Shepherd's Call. Highest damage ceiling in the class.",
+      "narrator": "Some players don't want to pick a side of the battlefield. Meet **The Downpour** \u2014 it isn't picky either.",
+      "slug": "the-downpour",
+      "classSlug": "druid"
+    },
+    {
+      "cls": "Druid",
+      "name": "The Rockslide",
+      "feel": [
+        "AOE",
+        "DOT"
+      ],
+      "range": "RANGED",
+      "complexity": "HIGH",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Boulder, Dolmen Stone, The Basilisk + Locran's Talisman, Beru of the Old Mountain. Orbiting persistent damage.",
+      "narrator": "You don't need to be fast if what you're carrying is heavy enough. Meet **The Rockslide**.",
+      "slug": "the-rockslide",
+      "classSlug": "druid"
+    },
+    {
+      "cls": "Druid",
+      "name": "The Twister",
+      "feel": [
+        "AOE",
+        "MOBILE"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Tornado, Beru of the Storm Shepherd, Ifeh's Dire Totem, Aspect of the Orange Herald. Familiar AoE flow.",
+      "narrator": "Some players would rather send several small disasters instead of one big one. Meet **The Twister**.",
+      "slug": "the-twister",
+      "classSlug": "druid"
+    },
+    {
+      "cls": "Druid",
+      "name": "The Landslide",
+      "feel": [
+        "AOE"
+      ],
+      "range": "MELEE",
+      "complexity": "LOW",
+      "audience": "BEGINNER",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Pulverize, Werebear AoE smashing. Simple, forgiving, easy on-ramp.",
+      "narrator": "Not every hero needs six buttons and a rotation. Meet **The Landslide** \u2014 walk up, slam, repeat.",
+      "slug": "the-landslide",
+      "classSlug": "druid"
+    },
+    {
+      "cls": "Necromancer",
+      "name": "The Red Tide",
+      "feel": [
+        "AOE",
+        "BURST"
+      ],
+      "range": "RANGED",
+      "complexity": "LOW",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Blood Wave (Hematolagnia), Kessime's Legacy, Ring of Starless Skies. Highest sustained AoE, simple to pilot.",
+      "narrator": "Some players don't want a plan. They want a wave that doesn't stop coming. Meet **The Red Tide**.",
+      "slug": "the-red-tide",
+      "classSlug": "necromancer"
+    },
+    {
+      "cls": "Necromancer",
+      "name": "The Pulse",
+      "feel": [
+        "AOE"
+      ],
+      "range": "HYBRID",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Blood Surge, Skeleton Warriors/Mages, Iron Maiden. Fast AoE clear, leveling and casual endgame.",
+      "narrator": "Nobody needs the wave yet. Just a pulse that clears the room. Meet **The Pulse**.",
+      "slug": "the-pulse",
+      "classSlug": "necromancer"
+    },
+    {
+      "cls": "Necromancer",
+      "name": "The Quiet Harvest",
+      "feel": [
+        "PASSIVE"
+      ],
+      "range": "HYBRID",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Skeletal Reapers, Shadow Mages, sacrificed Golem for crit. Hands-off, relaxed pacing, capped ceiling.",
+      "narrator": "Some players would rather watch. Meet **The Quiet Harvest** \u2014 you summon, you reposition, they do the rest.",
+      "slug": "the-quiet-harvest",
+      "classSlug": "necromancer"
+    },
+    {
+      "cls": "Necromancer",
+      "name": "The Bodyguard",
+      "feel": [
+        "TANKY",
+        "PASSIVE"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Golem that never dies, Aspect of Reanimation, Aspect of Glynn's Anvil. Relaxed minion play, real boss burst.",
+      "narrator": "Some players want something between them and everything else. Meet **The Bodyguard**.",
+      "slug": "the-bodyguard",
+      "classSlug": "necromancer"
+    },
+    {
+      "cls": "Necromancer",
+      "name": "The Orbit",
+      "feel": [
+        "SINGLE_TARGET"
+      ],
+      "range": "RANGED",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Bone Spirit, Astral Projection, Aspect of Bursting Bones, Crown of Lucion. Single-target and boss farming.",
+      "narrator": "One shape circling you, over and over, waiting for the right moment to go through something. Meet **The Orbit**.",
+      "slug": "the-orbit",
+      "classSlug": "necromancer"
+    },
+    {
+      "cls": "Rogue",
+      "name": "The Long Shot",
+      "feel": [
+        "SINGLE_TARGET",
+        "BURST"
+      ],
+      "range": "RANGED",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Penetrating Shot (Cold/Poison), Eaglehorn, Nilfur's Narrow Eye. Safest top-tier pick, ranged.",
+      "narrator": "Some players don't need to get close to be dangerous. Meet **The Long Shot**.",
+      "slug": "the-long-shot",
+      "classSlug": "rogue"
+    },
+    {
+      "cls": "Rogue",
+      "name": "The Flurry",
+      "feel": [
+        "AOE",
+        "MOBILE"
+      ],
+      "range": "MELEE",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Dance of Knives, Death's Pavane, Beru of Spellbound Steel. Best leveling build, carries into endgame.",
+      "narrator": "Screen-wide, auto-targeting, and it doesn't slow down to aim. Meet **The Flurry**.",
+      "slug": "the-flurry",
+      "classSlug": "rogue"
+    },
+    {
+      "cls": "Rogue",
+      "name": "The Boomerang",
+      "feel": [
+        "STYLISH",
+        "DOT",
+        "MOBILE"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Twisting Blades, Blade Shift, The Maestro, Etna's Lost Dagger. Stylish, mobile, DoT pressure.",
+      "narrator": "Throw it once. It comes back through everything on the way. Meet **The Boomerang**.",
+      "slug": "the-boomerang",
+      "classSlug": "rogue"
+    },
+    {
+      "cls": "Rogue",
+      "name": "The Quickdraw",
+      "feel": [
+        "AOE"
+      ],
+      "range": "RANGED",
+      "complexity": "LOW",
+      "audience": "BEGINNER",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Rapid Fire, ricocheting arrows. Simple, low-risk, easy on-ramp.",
+      "narrator": "Simple, honest, and it doesn't ask you to think about imbuements yet. Meet **The Quickdraw**.",
+      "slug": "the-quickdraw",
+      "classSlug": "rogue"
+    },
+    {
+      "cls": "Spiritborn",
+      "name": "The Locust",
+      "feel": [
+        "MOBILE"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Pestilent Swarm, Rushing Claw, Aspect of Infestation, Ring of Writhing Moon. Top speedfarming, high mobility.",
+      "narrator": "One of you becomes several of you, and none of them stay still long enough to hit. Meet **The Locust**.",
+      "slug": "the-locust",
+      "classSlug": "spiritborn"
+    },
+    {
+      "cls": "Spiritborn",
+      "name": "The Long Sting",
+      "feel": [
+        "DOT"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Stinger, Potent Sting, Harmony of Ebewaka, Rod of Kepeleke. Leveling through endgame, poison DoT.",
+      "narrator": "Not one hit. A slow spread, and then everything that's poisoned goes off at once. Meet **The Long Sting**.",
+      "slug": "the-long-sting",
+      "classSlug": "spiritborn"
+    },
+    {
+      "cls": "Spiritborn",
+      "name": "The Volley",
+      "feel": [
+        "AOE"
+      ],
+      "range": "RANGED",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Quill Volley, Rod of Kepeleke, Reaper's Aspect. Dependable, always-solid ranged option.",
+      "narrator": "Nothing flashy. Just a volley that never really stops coming. Meet **The Volley**.",
+      "slug": "the-volley",
+      "classSlug": "spiritborn"
+    },
+    {
+      "cls": "Spiritborn",
+      "name": "The Flatten",
+      "feel": [
+        "AOE",
+        "TANKY"
+      ],
+      "range": "MELEE",
+      "complexity": "LOW",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Crushing Hand, Rod of Kepeleke guaranteed crit, Prodigy's Tempo. Fast AoE, tanky, easy to pilot.",
+      "narrator": "Some players don't want to be clever about it. Meet **The Flatten** \u2014 walk in, hit the ground, walk out.",
+      "slug": "the-flatten",
+      "classSlug": "spiritborn"
+    },
+    {
+      "cls": "Paladin",
+      "name": "The Judgment",
+      "feel": [
+        "AOE",
+        "TANKY"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Wing Strikes, Aspect of Tyrael's Jurisdiction, Sanctis of Kethamar. Clean mix of damage and defense.",
+      "narrator": "Some players want the room to know judgment is coming before it lands. Meet **The Judgment**.",
+      "slug": "the-judgment",
+      "classSlug": "paladin"
+    },
+    {
+      "cls": "Paladin",
+      "name": "The Fervor",
+      "feel": [
+        "BURST",
+        "TANKY"
+      ],
+      "range": "MELEE",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Zeal, Red Sermon, Embattled Aspect + Zealot Oath (near-full HP regen/sec). Fast, tanky melee.",
+      "narrator": "Glass cannon, sure \u2014 just make it out of diamond instead of glass. Meet **The Fervor**.",
+      "slug": "the-fervor",
+      "classSlug": "paladin"
+    },
+    {
+      "cls": "Paladin",
+      "name": "The Bulwark",
+      "feel": [
+        "TANKY"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Blessed Shield, Juggernaut Oath, Ward of the White Dove. Genuine tankiness with respectable damage.",
+      "narrator": "Some players would rather be the wall than get past it. Meet **The Bulwark**.",
+      "slug": "the-bulwark",
+      "classSlug": "paladin"
+    },
+    {
+      "cls": "Paladin",
+      "name": "The Hammerdin",
+      "feel": [
+        "AOE"
+      ],
+      "range": "HYBRID",
+      "complexity": "LOW",
+      "audience": "BEGINNER",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Blessed Hammer, cheap Faith cost, scales to endgame without a respec. Easiest strong leveling build.",
+      "narrator": "Some names carry over from a different game entirely, because the idea never needed replacing. Meet **The Hammerdin**.",
+      "slug": "the-hammerdin",
+      "classSlug": "paladin"
+    },
+    {
+      "cls": "Warlock",
+      "name": "The Reckoning",
+      "feel": [
+        "BURST",
+        "AOE"
+      ],
+      "range": "RANGED",
+      "complexity": "HIGH",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Apocalypse, Umbral Chains, Hands of the Worldbreaker, Fleshwrit Carapace. Highest ceiling, front-loaded complexity.",
+      "narrator": "You don't need this one to be fast. You need it to end the fight the moment it goes off. Meet **The Reckoning**.",
+      "slug": "the-reckoning",
+      "classSlug": "warlock"
+    },
+    {
+      "cls": "Warlock",
+      "name": "The Volunteer",
+      "feel": [
+        "AOE",
+        "PASSIVE"
+      ],
+      "range": "HYBRID",
+      "complexity": "LOW",
+      "audience": "ALLROUND",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Lunatic (Command Fallen), Cage of Madness, Mega Lunatic split. Fast, easier AoE, low-effort farm.",
+      "narrator": "Something else walks into the blast for you. That's the whole plan. Meet **The Volunteer**.",
+      "slug": "the-volunteer",
+      "classSlug": "warlock"
+    },
+    {
+      "cls": "Warlock",
+      "name": "The Ambush",
+      "feel": [
+        "BURST",
+        "STYLISH"
+      ],
+      "range": "HYBRID",
+      "complexity": "MODERATE",
+      "audience": "ENDGAME",
+      "freshness": "Confirmed",
+      "last_checked": "2026-07-05",
+      "core": "Dread Claws, Shadowform stacks, Litany of Sable, Shadow of Harash set. Positioning burst, tanky enough.",
+      "narrator": "Stay hidden. Let them bunch up. Then it's not a fight anymore. Meet **The Ambush**.",
+      "slug": "the-ambush",
+      "classSlug": "warlock"
+    }
+  ],
+  "blankSlatePool": [
+    "The Ember",
+    "The Wrecking Ball",
+    "The Landslide",
+    "The Pulse",
+    "The Quickdraw",
+    "The Volley",
+    "The Hammerdin",
+    "The Volunteer"
+  ],
+  "classes": [
+    "Barbarian",
+    "Druid",
+    "Necromancer",
+    "Paladin",
+    "Rogue",
+    "Sorcerer",
+    "Spiritborn",
+    "Warlock"
+  ]
+}

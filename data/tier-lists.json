@@ -1,0 +1,264 @@
+{
+  "Sorcerer": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Firewall DoT Sorcerer",
+        "linkedBuildSlug": "the-long-burn",
+        "note": "The season's real winner. Fire scaling got real help from Paragon and Heat changes, and the DoT ramp hits hard once it's rolling.",
+        "sources": ["Leprestore (Jul 1, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Crackling Energy Sorcerer",
+        "linkedBuildSlug": "the-overcharge",
+        "note": "Still the smoothest top-tier Sorc experience even after the Unstable Currents nerf softened its ceiling.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Ice Shards Sorcerer",
+        "linkedBuildSlug": "the-stillpoint",
+        "note": "Cold got quiet buffs this patch. Strong AoE clear with real crowd control on top.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Meteor Sorcerer",
+        "linkedBuildSlug": "the-comet",
+        "note": "Helm and Paragon buffs pushed this into real burst-damage territory this season.",
+        "sources": ["Leprestore (Jul 1, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "Ball Lightning Sorcerer",
+        "reason": "Icy Veins still lists this A-tier, but GAMES.GG (posted a day later) says plainly the old Ball Lightning meta is dead following the Unstable Currents rework. Direct source conflict on a build that's likely just outdated on one side - held back rather than guessed at."
+      },
+      {
+        "name": "Hydra Sorcerer",
+        "reason": "Mentioned only by Leprestore, not corroborated elsewhere. Hydra guides have a specific history of going stale on us before (excluded from the original build library for the same reason) - needs a second independent source before it goes on a ranked list."
+      },
+      {
+        "name": "Charged Bolts Sorcerer / Fireball Sorcerer / Static Field Blizzard Sorcerer",
+        "reason": "Single-source mentions (Icy Veins only), not cross-verified against the other two sources checked. Left off this pass."
+      }
+    ]
+  },
+  "Barbarian": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Whirlwind Barbarian",
+        "linkedBuildSlug": "the-wrecking-ball",
+        "note": "The safest recommendation in the class. Smooth, extremely tanky, and among the fastest farming builds in the game on top of a real Pit ceiling.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)", "AOEAH (Jul 1, 2026)"]
+      },
+      {
+        "tier": "S",
+        "buildName": "Ancients Barbarian (Brobarian)",
+        "linkedBuildSlug": "the-war-council",
+        "note": "A Call of the Ancients scaling fix pulled this to the top of the leaderboard this patch - highest non-bugged DPS in the class, alternating Mighty Throw and Call of the Ancients as double ultimates. Worth noting: Icy Veins' own endgame table doesn't list an Ancients build by name at all, even though it's the newer, more detailed sources that call out this exact patch mechanic.",
+        "sources": ["GAMES.GG (Jul 5, 2026)", "AOEAH (Jul 1, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Rend Barbarian",
+        "linkedBuildSlug": "the-long-cut",
+        "note": "Season 14 item changes gave bleed-stacking Rend a real boost. Safer and more sustained than the S-tier picks, just slower to clear.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)", "AOEAH (Jul 1, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Hammer of the Ancients Barbarian",
+        "linkedBuildSlug": "the-anvil",
+        "note": "Still hits enormously hard and one-shots elites when fully optimized, but no longer the dominant force it was in earlier seasons - a notch below the S-tier picks.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "AOEAH (Jul 1, 2026)"]
+      }
+    ],
+    "excluded": []
+  },
+  "Druid": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Shred Druid",
+        "linkedBuildSlug": "the-blender",
+        "note": "High mobility with a smooth, responsive rotation. Not the single highest raw damage in the class, but the overall playability is what earns the S tier.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "S",
+        "buildName": "Lightning Storm Druid",
+        "linkedBuildSlug": "the-downpour",
+        "note": "A season of Storm-skill buffs pushed this well-established build back into the top tier.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Boulder Druid",
+        "linkedBuildSlug": "the-rockslide",
+        "note": "Dolmen Stone buffs made this the season's refreshing pick, especially notable since most items got nerfed this patch.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Tornado Druid",
+        "linkedBuildSlug": "the-twister",
+        "note": "The Storm Set overhaul gave pure Tornado a genuinely complete kit this season instead of a half-build.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "B",
+        "buildName": "Companion / Pulverize Druid",
+        "linkedBuildSlug": "the-landslide",
+        "note": "Still playable, but the Shepherd's Aspect nerf (13% down to 3% damage per companion) gutted what used to be its top setup. A shadow of its former self, per both sources.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "IGGM's Druid tier list (as a source)",
+        "reason": "Published June 29, 2026 - one day before Season 14 actually launched. It's a pre-patch prediction, not verified post-launch data, even though it happens to land on the same S-tier picks (Shred, Lightning Storm) as the two live sources used here. Discounted as a citation on principle - agreement after the fact doesn't retroactively make a prediction a verified source."
+      }
+    ]
+  },
+  "Necromancer": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Blood Wave Necromancer",
+        "linkedBuildSlug": "the-red-tide",
+        "note": "Still the top Necro build despite this patch's nerfs, though margins are tighter than last season.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Golem Necromancer",
+        "linkedBuildSlug": "the-bodyguard",
+        "note": "The new home for Necro players after Banished Lord's Talisman got gutted. More relaxed, minion-focused playstyle.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Bone Spirit Necromancer",
+        "linkedBuildSlug": "the-orbit",
+        "note": "Solid single-target and boss farming, benefiting from the new Mythic system's crit damage scaling.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "Naz Mages / Minion Necromancer",
+        "reason": "Icy Veins ranks a summoner build (Naz Mages / Mendeln Summoner) S-tier for endgame push, but GAMES.GG says generic Minion Necromancer 'falls off significantly in endgame Pit pushing.' Not clearly the same build under two names, and the two sources actively disagree on summoner necro's endgame viability - held back rather than picking a side."
+      },
+      {
+        "name": "Cold Sever Necromancer / Cold Army of the Dead / Blood Lance Necromancer",
+        "reason": "Single-source mentions (Icy Veins only), not cross-verified, and none map cleanly onto an existing library build."
+      }
+    ]
+  },
+  "Rogue": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Penetrating Shot Rogue",
+        "linkedBuildSlug": "the-long-shot",
+        "note": "The safer top Rogue pick. Massive multi-hit scaling with far less risk than the bugged alternative.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Dance of Knives Rogue",
+        "linkedBuildSlug": "the-flurry",
+        "note": "The best leveling build in the game, and it transitions cleanly into endgame mapping.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "Death Trap Rogue",
+        "reason": "GAMES.GG confirms this is still the highest-ceiling build in the game right now (Pit 150) purely because of a bugged interaction. Same call as the original build library: not something we point players toward regardless of power level, given the hotfix risk."
+      },
+      {
+        "name": "Rapid Fire Rogue",
+        "reason": "Single-source (Icy Veins only), and it cuts against our own library's read of that build as a low-complexity beginner pick rather than an endgame S-tier pusher. Held back pending a second source."
+      },
+      {
+        "name": "Twisting Blades Rogue",
+        "reason": "GAMES.GG says it got direct damage buffs and is competitive again, but Icy Veins' endgame table doesn't list it at all. Single-sourced for current tier standing - not ranked this pass despite already being a Confirmed build in the library."
+      }
+    ]
+  },
+  "Spiritborn": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Pestilent Swarm Spiritborn",
+        "linkedBuildSlug": "the-locust",
+        "note": "Still the top Spiritborn build and the best overall package after this patch's nerfs.",
+        "sources": ["Icy Veins (Jul 4, 2026, listed as Soar Swarm)", "GAMES.GG (Jul 5, 2026)"]
+      },
+      {
+        "tier": "A",
+        "buildName": "Quill Volley Spiritborn",
+        "linkedBuildSlug": "the-volley",
+        "note": "Reliable ranged alternative, less affected by this patch's resolve-stacking nerfs, comfortable for all content.",
+        "sources": ["Icy Veins (Jul 4, 2026)", "GAMES.GG (Jul 5, 2026)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "Stinger Spiritborn",
+        "reason": "Only GAMES.GG mentions it as a strong endgame-scaling pick. Icy Veins' endgame table doesn't include it. Single-sourced, held back."
+      },
+      {
+        "name": "Crushing Hand Spiritborn",
+        "reason": "GAMES.GG calls it a budget/early-endgame option, not a top pick, and Icy Veins' endgame table omits it entirely. Neither source ranks it top-tier this season, consistent with our own library tagging it a beginner build."
+      },
+      {
+        "name": "Withering Fist Spiritborn",
+        "reason": "Icy Veins-only mention with no corresponding build in our library to link it to."
+      }
+    ]
+  },
+  "Paladin": {
+    "lastChecked": "2026-07-06",
+    "scope": "Endgame push (Pit / Torment) - Season 14, Lord of Hatred",
+    "entries": [
+      {
+        "tier": "S",
+        "buildName": "Zealot Paladin",
+        "linkedBuildSlug": "the-fervor",
+        "note": "GAMES.GG calls this outright the new top Paladin build this patch, following a Red Sermon damage buff. Icy Veins' own table places it a notch lower at A - noted here rather than picking one number and hiding the disagreement.",
+        "sources": ["GAMES.GG (Jul 5, 2026)", "Icy Veins (Jul 4, 2026, ranked A)"]
+      }
+    ],
+    "excluded": [
+      {
+        "name": "Blessed Shield Paladin",
+        "reason": "Icy Veins-only S-tier mention, not corroborated by GAMES.GG. Held back pending a second source."
+      },
+      {
+        "name": "Wing Strikes Paladin",
+        "reason": "GAMES.GG-only mention, not in Icy Veins' endgame table at all. Held back pending a second source."
+      },
+      {
+        "name": "Blessed Hammer builds (Hammerdin)",
+        "reason": "Icy Veins-only mentions. Consistent with our own library tagging this a beginner-focused build rather than a top endgame pusher, so left off this ranked pass."
+      }
+    ]
+  }
+}

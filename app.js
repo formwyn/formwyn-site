@@ -1,0 +1,80 @@
+// Homepage "tell us what you want" flow. Calls /api/match, which does the
+// real LLM extraction + matching server-side, and renders the returned
+// reveal. Recency (last few builds shown to this visitor) is tracked
+// client-side in localStorage and sent with each request so the variety
+// mechanism can de-weight repeats without needing server-side session state.
+
+const RECENCY_KEY = 'formwyn_recent_builds';
+const RECENCY_WINDOW = 3;
+
+function getRecent() {
+  try {
+    return JSON.parse(localStorage.getItem(RECENCY_KEY) || '[]');
+  } catch {
+    return [];
+  }
+}
+
+function pushRecent(name) {
+  const recent = getRecent();
+  recent.push(name);
+  while (recent.length > RECENCY_WINDOW) recent.shift();
+  localStorage.setItem(RECENCY_KEY, JSON.stringify(recent));
+}
+
+function renderReveal(container, data) {
+  const { reveal, build } = data;
+  container.innerHTML = `
+    <div class="reveal-card">
+      <p class="narrator">${reveal.narrator}</p>
+      <p class="core">${reveal.core}</p>
+      <p class="freshness ${reveal.freshnessState}">${reveal.freshnessLine}</p>
+      <a class="permalink" href="/builds/${build.slug}.html">Permalink for ${build.name}</a>
+    </div>
+  `;
+}
+
+function renderError(container, message) {
+  container.innerHTML = `
+    <div class="reveal-card error-card">
+      <p class="narrator">Something went wrong finding your build: ${message}</p>
+    </div>
+  `;
+}
+
+async function askFormwyn(text, container, button) {
+  button.disabled = true;
+  button.textContent = 'Consulting the vault…';
+  try {
+    const res = await fetch('/api/match', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({ text, recentlyServed: getRecent() }),
+    });
+    const data = await res.json();
+    if (!res.ok) {
+      renderError(container, data.error || 'Unknown error');
+      return;
+    }
+    renderReveal(container, data);
+    pushRecent(data.build.name);
+  } catch (err) {
+    renderError(container, err.message);
+  } finally {
+    button.disabled = false;
+    button.textContent = 'Reveal my build';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('ask-form');
+  if (!form) return;
+  const textarea = document.getElementById('ask-text');
+  const button = document.getElementById('ask-button');
+  const container = document.getElementById('reveal-container');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    askFormwyn(textarea.value.trim(), container, button);
+  });
+});

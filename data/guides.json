@@ -1,0 +1,82 @@
+{
+  "leveling": {
+    "title": "Leveling 1-70",
+    "lastChecked": "2026-07-06",
+    "intro": "Not class-specific - this is about which systems to prioritize while leveling any character in Season 14, so the tasks you actually spend time on are the ones that move the needle.",
+    "sections": [
+      {
+        "heading": "Set up before you start farming",
+        "body": "Equip your pet from the Wardrobe before leaving town - it picks up gold and materials automatically, which saves a surprising amount of backtracking over a full leveling session. Teleport to Temis and start a War Plan (the Lord of Hatred activity-chain system) early, aiming for a setup with strong Helltide timing. Grab your Mercenary while you're there too, and keep Merc Rapport ticking up rather than treating it as something to fix later. Then head to Zarbinzet and start the Season 14 questline so seasonal reputation is progressing in the background instead of being forgotten for an hour."
+      },
+      {
+        "heading": "Helltide and Maggot XP is the engine",
+        "body": "The core loop that actually moves your level fastest is Helltide density feeding Maggot XP globes: kill a Hellwyrm, it spawns Maggots, killing Maggots drops large XP globes that scale up with world difficulty. Unlocking the Writhe and Rot War Plan node is the point this really turns on. Season 14 Ruptures are also worth doing whenever they appear - strong density and seasonal progress at once. Early on, avoid Hellborn and Wyrms if your character still feels weak; dying twice trying to be brave at level 9 costs more time than it saves."
+      },
+      {
+        "heading": "Difficulty and milestones",
+        "body": "Start on Normal (Hard is fine if you already know your class). Move up to Hard around level 15 once your class bonus activates and your damage feels good - difficulty should only go up when your clear speed stays fast, not on a fixed schedule. The first Capstone Dungeon, Torrid Menagerie in Hawezar, is available around level 35 for extra skill points. Once you hit 70, do the second Capstone (Hellish Descent in Scosglen) to open the path toward Pit progression."
+      },
+      {
+        "heading": "Getting from 70 to Torment 1",
+        "body": "At 70, switch to Penitent if you're not already there, then clean up your character before pushing further: equip runes, gamble Obols, check vendors, craft a few level-70 pieces at the Blacksmith, and temper for elemental damage, life, and resistances. Keep farming Helltide worms until roughly Paragon 35-40 to rush your first Paragon Legendary node, which can meaningfully spike your damage. Clear a Pit 10 to unlock Torment 1."
+      },
+      {
+        "heading": "Common mistakes",
+        "body": "Staying in low-density content is the biggest one, since the whole route depends on Maggot XP volume. Pushing difficulty before your clear speed can handle it is the second - a fast Hard run beats a slow Penitent one. The third is ignoring gear during Helltide breaks: you don't need a perfect setup, but salvaging, equipping upgrades, and buying strong vendor pieces during downtime adds up over a full session."
+      }
+    ],
+    "sources": ["Leprestore (Jun 30, 2026)", "AOEAH (Jul 1, 2026, corroborating War Plans as a Lord of Hatred system)"]
+  },
+  "legendary-farming": {
+    "title": "Farming legendary items and aspects",
+    "lastChecked": "2026-07-06",
+    "intro": "For fresh level-70 characters, the gap between 'build looks good on paper' and 'build actually works' is usually one or two missing Legendary Aspects. Here's the fastest verified way to close that gap this season.",
+    "sections": [
+      {
+        "heading": "The War Plan Dark Omen loop",
+        "body": "This is the single best repeatable method right now. Run War Plans and prioritize Nightmare Dungeons when they show up as a War Plan activity - it has to come from the War Plan system, not your own Nightmare Sigils, or the trick doesn't work. Once inside, check the dungeon's affixes for Dark Omen. If it's not there, keep cycling War Plan dungeons until you find one that has it."
+      },
+      {
+        "heading": "Running the loop",
+        "body": "Push through the dungeon until the Dark Omen ambush boss appears (often the Butcher or a similar ambush encounter), kill it, and loot - on Torment 1 or higher this reliably drops a Legendary item. Critically, do not kill the dungeon's final boss. Instead, teleport to town, hit Reset Dungeons, then teleport back in. The dungeon resets but keeps the same affixes, including Dark Omen, so you can farm the same ambush boss again. Repeating this can produce a Legendary roughly every few minutes."
+      },
+      {
+        "heading": "Turning drops into Aspects",
+        "body": "Legendary items are only half the loop. At the Blacksmith, salvage anything you don't need to keep - this unlocks or upgrades that item's Aspect in your Codex, which you can then imprint onto better gear. Mark obvious junk before you go so salvaging is a bulk action, not a one-by-one chore."
+      },
+      {
+        "heading": "For materials, gold, and Obols instead",
+        "body": "If Aspects aren't the bottleneck, Escalation Nightmare Dungeons are the stronger all-round farm: chain Nightmare Dungeon sigils together in the Horadric Cube and speed-clear them back to back. Each stage's reward portal lets you pick a Gold, Obol, or Material reserve, and the payout scales the deeper into the chain you go."
+      }
+    ],
+    "sources": ["MmoGah (Jul 2, 2026)", "WebSearch synthesis of AOEAH / MmoExp / GGWTB / NextTier coverage of the same Escalation Nightmare Dungeon mechanic"]
+  },
+  "uniques-charms-seals": {
+    "title": "Unique items, Charms, and Seals",
+    "lastChecked": "2026-07-06",
+    "intro": "Charms and Seals are real, current systems - the Talisman, introduced with the Lord of Hatred expansion - not something we're guessing at. Here's what they actually are and where they come from.",
+    "sections": [
+      {
+        "heading": "What the Talisman actually is",
+        "body": "The Talisman is a separate itemization tab added in Lord of Hatred that layers set-item-style bonuses on top of your existing gear, without taking over any of your equipment slots. It unlocks after finishing the Last of the Horadrim questline. It has 7 total sockets: one center socket for a Horadric Seal, and 6 outer sockets arranged around it for Charms."
+      },
+      {
+        "heading": "Seals: the center piece",
+        "body": "A Horadric Seal goes in the center socket and determines how many of the 6 outer Charm sockets are active and how many can hold unique-rarity Charms. Higher-rarity Seals unlock more slots: most Legendary Horadric Seals open 5 of the 6 outer sockets, and Mythic Unique Horadric Seals open all 6. Seals carry their own affixes on top of that (bonus damage tied to specific Charm sets, resource generation, and similar effects), and can be rerolled like other gear."
+      },
+      {
+        "heading": "Charms: the outer ring",
+        "body": "Charms fill the outer sockets and come in four rarities: Magic (1 affix), Rare (2 affixes), Unique (2 affixes plus a unique power), and Set (class-specific or generic set bonuses that scale up at 2/3/5-piece thresholds). Unique Charms are worth calling out specifically - they carry the same power as their equivalent Unique gear item but in charm form, which frees up the actual gear slot for something else."
+      },
+      {
+        "heading": "Where Charms and Seals actually drop",
+        "body": "Charms are pure world loot - they start dropping from regular kills, dungeon chests, and endgame activities once the Talisman is unlocked, and are not sold by merchants or handed out as quest rewards. Drop quality scales hard with Torment difficulty: Set Charms become common around Torment 3, Unique Charms around Torment 8, and Mythic Horadric Seals specifically don't show up in meaningful numbers until Torment 10+. Two targeted methods stand out: running War Plans through the command table in Temis, and starting Undercity runs with a Tribute of the Horadrim (a Lesser Tribute can be crafted at the Occultist; higher tiers come from World Bosses and War Plan completions and yield better drops)."
+      },
+      {
+        "heading": "Getting specific Unique items (not just Charms)",
+        "body": "Season 14's target-farming loop for Uniques and Mythic Uniques runs through a new seasonal system: farm Pandemonium Ruptures to spawn a Realmwalker, defeat it to open a Deathtoll Chamber, clear the chamber for Superior Lair Keys, then spend those keys to fight the Corrupted Reaper and open its Hoard - currently the single best drop-chance source for Mythic Uniques and the Pandemonium Fragments needed to upgrade a regular Unique into a Mythic one via the Horadric Cube. Everything here scales with Torment tier, so pushing difficulty as soon as your build can handle it is worth more than grinding longer at a low tier."
+      }
+    ],
+    "sources": ["Diablo 4 Wiki / Fextralife (Talisman System Guide)", "GAMES.GG (Jun 9, 2026)", "MmoGah (Jul 3, 2026, Corrupted Reaper pipeline)"]
+  }
+}
