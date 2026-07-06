@@ -1,10 +1,10 @@
-// Homepage "tell us what you want" flow. Calls /api/match, which does the
+// Homepage "tell us about your room" flow. Calls /api/match, which does the
 // real LLM extraction + matching server-side, and renders the returned
-// reveal. Recency (last few builds shown to this visitor) is tracked
+// reveal. Recency (last few setups shown to this visitor) is tracked
 // client-side in localStorage and sent with each request so the variety
 // mechanism can de-weight repeats without needing server-side session state.
 
-const RECENCY_KEY = 'formwyn_recent_builds';
+const RECENCY_KEY = 'formwyn_recent_setups';
 const RECENCY_WINDOW = 3;
 
 function getRecent() {
@@ -23,13 +23,25 @@ function pushRecent(name) {
 }
 
 function renderReveal(container, data) {
-  const { reveal, build } = data;
+  const { reveal, setup } = data;
+  const itemRows = (reveal.items || []).map((item) => `
+    <tr>
+      <td>${item.category}</td>
+      <td>${item.product}</td>
+      <td>${item.price}</td>
+    </tr>
+  `).join('');
+
   container.innerHTML = `
     <div class="reveal-card">
       <p class="narrator">${reveal.narrator}</p>
-      <p class="core">${reveal.core}</p>
+      <table class="freshness-table">
+        <thead><tr><th>Category</th><th>Pick</th><th>Price</th></tr></thead>
+        <tbody>${itemRows}</tbody>
+      </table>
+      <p class="core"><strong>Estimated total:</strong> ${reveal.totalEstimate}</p>
       <p class="freshness ${reveal.freshnessState}">${reveal.freshnessLine}</p>
-      <a class="permalink" href="/builds/${build.slug}.html">Permalink for ${build.name}</a>
+      <a class="permalink" href="/setups/${setup.slug}.html">Permalink for ${setup.name}</a>
     </div>
   `;
 }
@@ -37,14 +49,14 @@ function renderReveal(container, data) {
 function renderError(container, message) {
   container.innerHTML = `
     <div class="reveal-card error-card">
-      <p class="narrator">Something went wrong finding your build: ${message}</p>
+      <p class="narrator">Something went wrong finding your setup: ${message}</p>
     </div>
   `;
 }
 
 async function askFormwyn(text, container, button) {
   button.disabled = true;
-  button.textContent = 'Consulting the vault…';
+  button.textContent = 'Putting your setup together…';
   try {
     const res = await fetch('/api/match', {
       method: 'POST',
@@ -57,12 +69,12 @@ async function askFormwyn(text, container, button) {
       return;
     }
     renderReveal(container, data);
-    pushRecent(data.build.name);
+    pushRecent(data.setup.name);
   } catch (err) {
     renderError(container, err.message);
   } finally {
     button.disabled = false;
-    button.textContent = 'Reveal my build';
+    button.textContent = 'Reveal my setup';
   }
 }
 

@@ -1,372 +1,206 @@
-// Generates all data-driven static pages from data/builds.json,
-// data/tier-lists.json, and data/guides.json: build pages, class pages,
-// the tier-list section (real content where researched, honest
-// placeholder where not), the guides section (same rule), and the
-// patch tracker (real freshness data). Zero dependencies.
+// Generates all data-driven static pages from data/setups.json and
+// data/categories.json: setup-bundle pages, the setups index, category
+// guide pages, the guides index, the real-setups gallery (reader
+// submissions), and the patch tracker (freshness data). Zero dependencies.
 // Run with: node scripts/generate-pages.js
 const fs = require('fs');
 const path = require('path');
 const { pageShell } = require('../lib/partials');
-const { classIcon, tierBadge, freshnessBadge } = require('../lib/icons');
+const { categoryIcon, freshnessBadge } = require('../lib/icons');
 
 const root = path.join(__dirname, '..');
-const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'builds.json'), 'utf8'));
-const { builds, classes } = data;
+const setupsData = JSON.parse(fs.readFileSync(path.join(root, 'data', 'setups.json'), 'utf8'));
+const { setups } = setupsData;
 
-let tierLists = {};
-const tierListsPath = path.join(root, 'data', 'tier-lists.json');
-if (fs.existsSync(tierListsPath)) {
-  tierLists = JSON.parse(fs.readFileSync(tierListsPath, 'utf8'));
+let categories = {};
+const categoriesPath = path.join(root, 'data', 'categories.json');
+if (fs.existsSync(categoriesPath)) {
+  categories = JSON.parse(fs.readFileSync(categoriesPath, 'utf8'));
 }
 
-let guides = {};
-const guidesPath = path.join(root, 'data', 'guides.json');
-if (fs.existsSync(guidesPath)) {
-  guides = JSON.parse(fs.readFileSync(guidesPath, 'utf8'));
+const CATEGORY_ORDER = ['desks', 'chairs', 'monitor-arms', 'cable-management', 'lighting', 'mini-pcs'];
+
+function catIconBadge(slug) {
+  return '<span class="class-icon-badge">' + categoryIcon(slug, 20) + '</span>';
 }
 
-function classSlugFor(cls) {
-  return builds.find((b) => b.cls === cls).classSlug;
-}
-
-function buildSlugFor(slug) {
-  const b = builds.find((x) => x.slug === slug);
-  return b ? b.slug : null;
-}
-
-function iconBadge(cls) {
-  return '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>';
-}
-
-function fullDetailSection(detail) {
-  const detailFreshBadge = freshnessBadge(detail.detailFreshness === 'Confirmed' ? 'Confirmed' : 'Provisional');
-
-  const skillBarItems = (detail.skillBar || []).map(function (s) {
-    return '<li><strong>' + s.skill + '</strong> &mdash; ' + s.role + '</li>';
-  }).join('\n');
-
-  const passiveItems = (detail.keyPassives || []).map(function (p) {
-    return '<li>' + p + '</li>';
-  }).join('\n');
-
-  const gearRows = (detail.gear || []).map(function (g) {
+function setupPage(s) {
+  const itemRows = s.items.map(function (item) {
     return [
       '<tr>',
-      '<td class="tier-cell">' + g.slot + '</td>',
-      '<td>' + g.aspect + '</td>',
-      '<td class="meta">' + g.effect + '</td>',
+      '<td class="tier-cell">' + item.category + '</td>',
+      '<td>' + item.product + '</td>',
+      '<td class="meta">' + item.price + '</td>',
       '</tr>',
     ].join('');
   }).join('\n');
 
-  const statRows = (detail.statPriority || []).map(function (s) {
-    return [
-      '<tr>',
-      '<td class="tier-cell">' + s.slot + '</td>',
-      '<td class="meta">' + s.priority + '</td>',
-      '</tr>',
-    ].join('');
-  }).join('\n');
-
-  const gemsLine = detail.gems
-    ? '<p class="core"><strong>Gems:</strong> Weapon &mdash; ' + detail.gems.weapon + '. Armor &mdash; ' + detail.gems.armor + '. Jewelry &mdash; ' + detail.gems.jewelry + '.</p>'
-    : '';
-
-  const runewordItems = (detail.runewords || []).map(function (r) { return '<li>' + r + '</li>'; }).join('\n');
-  const talismanItems = (detail.talisman || []).map(function (t) { return '<li>' + t + '</li>'; }).join('\n');
-
-  return [
-    '<h2>Full build detail</h2>',
-    '<div class="reveal-card">',
-    '  ' + detailFreshBadge,
-    '  <p class="core" style="margin-top:0.8rem;">' + detail.detailNote + '</p>',
-    '</div>',
-    '<h2>Skill bar</h2>',
-    '<ul>' + skillBarItems + '</ul>',
-    passiveItems ? '<h2>Key passives</h2><ul>' + passiveItems + '</ul>' : '',
-    '<h2>Gear &amp; aspects</h2>',
-    '<table class="freshness-table">',
-    '<thead><tr><th>Slot</th><th>Aspect / Unique</th><th>Effect</th></tr></thead>',
-    '<tbody>' + gearRows + '</tbody>',
-    '</table>',
-    '<h2>Stat priority</h2>',
-    '<table class="freshness-table">',
-    '<thead><tr><th>Slot</th><th>Priority (highest first)</th></tr></thead>',
-    '<tbody>' + statRows + '</tbody>',
-    '</table>',
-    gemsLine,
-    runewordItems ? '<h2>Runewords</h2><ul>' + runewordItems + '</ul>' : '',
-    talismanItems ? '<h2>Talisman (Seal &amp; Charms)</h2><ul>' + talismanItems + '</ul>' : '',
-    detail.sources ? '<p class="tagline"><strong>Sources:</strong> ' + detail.sources.join(' &middot; ') + '</p>' : '',
-  ].join('\n');
-}
-
-function buildPage(b) {
-  const freshnessLine = b.freshness === 'Confirmed'
-    ? 'Verified for Season 14 - last checked ' + b.last_checked + '.'
-    : 'Early-season pick, still settling in - last checked ' + b.last_checked + '.';
-
-  const bodyParts = [
-    '<p><a href="/classes/' + b.classSlug + '.html">&larr; All ' + b.cls + ' builds</a></p>',
-    '<h1>' + iconBadge(b.cls) + ' ' + b.name + '</h1>',
-    '<div class="reveal-card">',
-    '  <p class="narrator">' + b.narrator + '</p>',
-    '  <p class="core">' + b.core + '</p>',
-    '  ' + freshnessBadge(b.freshness),
-    '</div>',
-  ];
-
-  if (b.fullDetail) {
-    bodyParts.push(fullDetailSection(b.fullDetail));
-  }
-
-  return pageShell({
-    title: b.name,
-    description: b.name + ' - a ' + b.cls + ' build for Diablo 4, ' + freshnessLine,
-    active: 'all-builds',
-    body: bodyParts.join('\n'),
-  });
-}
-
-function classPage(cls) {
-  const clsBuilds = builds.filter(function (b) { return b.cls === cls; });
-  const items = clsBuilds.map(function (b) {
-    return '<li><a href="/builds/' + b.slug + '.html">' +
-      '<span class="class-icon-badge">' + classIcon(cls, 18) + '</span>' +
-      '<span class="label-block"><span class="name">' + b.name + '</span>' +
-      '<span class="meta">' + b.feel.join(' &middot; ') + ' &middot; ' + b.complexity + '</span></span>' +
-      '</a></li>';
-  }).join('\n');
+  const freshnessLine = s.freshness === 'Confirmed'
+    ? 'Verified pricing and availability - last checked ' + s.last_checked + '.'
+    : 'Prices cross-referenced from current UK listings, not individually re-verified today - last checked ' + s.last_checked + '. Always confirm live price at checkout.';
 
   const body = [
-    '<p><a href="/classes.html">&larr; All classes</a></p>',
-    '<h1>' + iconBadge(cls) + ' ' + cls + '</h1>',
-    '<ul class="build-grid">' + items + '</ul>',
+    '<p><a href="/setups.html">&larr; All setups</a></p>',
+    '<h1>' + s.name + '</h1>',
+    '<div class="reveal-card">',
+    '  <p class="narrator">' + s.narrator + '</p>',
+    '  <table class="freshness-table">',
+    '  <thead><tr><th>Category</th><th>Pick</th><th>Price</th></tr></thead>',
+    '  <tbody>' + itemRows + '</tbody>',
+    '  </table>',
+    '  <p class="core"><strong>Estimated total:</strong> ' + s.totalEstimate + '</p>',
+    '  ' + freshnessBadge(s.freshness),
+    '  <p class="tagline" style="margin-top:0.6rem;">' + freshnessLine + '</p>',
+    '</div>',
+    '<p class="tagline"><strong>Sources:</strong> ' + s.sources.join(' &middot; ') + '</p>',
   ].join('\n');
 
   return pageShell({
-    title: cls + ' builds',
-    description: 'Verified ' + cls + ' build foundations for Diablo 4.',
-    active: 'all-builds',
+    title: s.name,
+    description: s.name + ' - a gaming setup recommendation for ' + s.roomSize.toLowerCase().replace('_', ' ') + ' rooms, ' + freshnessLine,
+    active: 'setups',
     body: body,
   });
 }
 
-function classesIndexPage() {
-  const items = classes.map(function (cls) {
-    const count = builds.filter(function (b) { return b.cls === cls; }).length;
-    return '<li><a href="/classes/' + classSlugFor(cls) + '.html">' +
-      '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>' +
-      '<span class="label-block"><span class="name">' + cls + '</span>' +
-      '<span class="meta">' + count + ' builds</span></span>' +
+function setupsIndexPage() {
+  const items = setups.map(function (s) {
+    return '<li><a href="/setups/' + s.slug + '.html">' +
+      '<span class="label-block"><span class="name">' + s.name + '</span>' +
+      '<span class="meta">' + s.totalEstimate + ' &middot; ' + s.roomSize.replace('_', ' ').toLowerCase() + '</span></span>' +
       '</a></li>';
   }).join('\n');
-  const body = [
-    '<h1>All builds</h1>',
-    '<p class="tagline">36 verified builds across all 8 classes. Every one sourced, freshness-tagged, and checked against the current season.</p>',
-    '<ul class="class-grid">' + items + '</ul>',
-  ].join('\n');
-  return pageShell({
-    title: 'All builds',
-    description: 'All Diablo 4 classes and verified builds covered by Formwyn.',
-    active: 'all-builds',
-    body: body,
-  });
-}
 
-function tierListIndexPage() {
-  const items = classes.map(function (cls) {
-    const has = !!tierLists[cls];
-    const metaLabel = has ? 'Researched' : 'In research';
-    return '<li><a href="/tier-lists/' + classSlugFor(cls) + '.html">' +
-      '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>' +
-      '<span class="label-block"><span class="name">' + cls + '</span>' +
-      '<span class="meta">' + metaLabel + '</span></span>' +
-      '</a></li>';
-  }).join('\n');
   const body = [
-    '<h1>Tier lists</h1>',
-    '<p class="tagline">Ranked, top-of-meta picks for players optimizing for the highest ceiling. Each class gets the same verification pass as the build library before it goes live here - real sources, cross-checked, conflicts disclosed rather than smoothed over.</p>',
+    '<h1>All setups</h1>',
+    '<p class="tagline">Complete, real-priced gaming setup bundles for small UK rooms - every pick sourced and freshness-tagged, same rule as everywhere else on Formwyn.</p>',
     '<ul class="class-grid build-grid">' + items + '</ul>',
   ].join('\n');
-  return pageShell({ title: 'Tier lists', description: 'Diablo 4 class tier lists, verified against current-season sources.', active: 'tier-lists', body });
-}
-
-function tierListClassPage(cls) {
-  const clsSlug = classSlugFor(cls);
-  const tl = tierLists[cls];
-
-  if (!tl) {
-    const body = [
-      '<p><a href="/tier-lists.html">&larr; All tier lists</a></p>',
-      '<h1>' + iconBadge(cls) + ' ' + cls + ' tier list</h1>',
-      '<div class="reveal-card">',
-      '  <p class="narrator">Still being verified.</p>',
-      '  <p class="core">We are not going to publish a ranking for ' + cls + ' until it has been cross-checked the same way the build library was - real sources, current-season tags, no guessing. Check back soon, or in the meantime browse the <a href="/classes/' + clsSlug + '.html">verified ' + cls + ' builds</a>.</p>',
-      '</div>',
-    ].join('\n');
-    return pageShell({ title: cls + ' tier list', description: cls + ' tier list for Diablo 4 - in research.', active: 'tier-lists', body });
-  }
-
-  const rows = tl.entries.map(function (e) {
-    const linkedSlug = e.linkedBuildSlug && buildSlugFor(e.linkedBuildSlug);
-    const nameHtml = linkedSlug
-      ? '<a href="/builds/' + linkedSlug + '.html">' + e.buildName + '</a>'
-      : e.buildName;
-    return [
-      '<tr>',
-      '<td class="tier-cell">' + tierBadge(e.tier) + '</td>',
-      '<td>' + nameHtml + '</td>',
-      '<td class="tagline" style="margin:0;">' + e.note + '</td>',
-      '<td class="meta">' + e.sources.join('<br>') + '</td>',
-      '</tr>',
-    ].join('');
-  }).join('\n');
-
-  const excludedItems = (tl.excluded || []).map(function (ex) {
-    return '<li><strong>' + ex.name + '</strong> - ' + ex.reason + '</li>';
-  }).join('\n');
-
-  const body = [
-    '<p><a href="/tier-lists.html">&larr; All tier lists</a></p>',
-    '<h1>' + iconBadge(cls) + ' ' + cls + ' tier list</h1>',
-    '<p class="tagline">' + tl.scope + ' - last checked ' + tl.lastChecked + '.</p>',
-    '<table class="freshness-table">',
-    '<thead><tr><th>Tier</th><th>Build</th><th>Why</th><th>Sources</th></tr></thead>',
-    '<tbody>' + rows + '</tbody>',
-    '</table>',
-    excludedItems ? '<h2>Left off this list, on purpose</h2><ul>' + excludedItems + '</ul>' : '',
-  ].join('\n');
 
   return pageShell({
-    title: cls + ' tier list',
-    description: 'Verified ' + cls + ' tier list for Diablo 4 Season 14, ' + tl.scope + '.',
-    active: 'tier-lists',
+    title: 'All setups',
+    description: 'All Formwyn gaming setup bundles for small UK rooms.',
+    active: 'setups',
     body: body,
   });
 }
 
-const GUIDE_ORDER = ['leveling', 'legendary-farming', 'uniques-charms-seals'];
-
-function guidesIndexPage() {
-  const items = GUIDE_ORDER.filter(function (slug) { return guides[slug]; }).map(function (slug) {
-    const g = guides[slug];
-    return '<li><a href="/guides/' + slug + '.html"><span class="label-block"><span class="name">' + g.title + '</span></span></a></li>';
-  }).join('\n');
-
-  const body = [
-    '<h1>Guides</h1>',
-    '<p class="tagline">System-level guides - not tied to one class - covering leveling, farming, and itemization. Same rule as everywhere else on Formwyn: nothing goes live until it is actually verified.</p>',
-    '<ul class="class-grid">' + items + '</ul>',
-    '<p class="tagline">More planned: endgame progression (Pit pushing, Paragon boards, Masterworking priorities), and a class-basics primer for brand-new players.</p>',
-  ].join('\n');
-
-  return pageShell({
-    title: 'Guides',
-    description: 'Diablo 4 system guides from Formwyn - leveling, legendary farming, Charms and Seals.',
-    active: 'guides',
-    body: body,
-  });
-}
-
-function guideDetailPage(slug) {
-  const g = guides[slug];
-  const sections = g.sections.map(function (s) {
+function categoryPage(slug) {
+  const c = categories[slug];
+  if (!c) return null;
+  const sections = c.sections.map(function (s) {
     return '<h2>' + s.heading + '</h2>\n<p class="tagline">' + s.body + '</p>';
   }).join('\n');
 
   const body = [
     '<p><a href="/guides.html">&larr; All guides</a></p>',
-    '<h1>' + g.title + '</h1>',
-    '<p class="tagline">' + g.intro + '</p>',
+    '<h1>' + catIconBadge(slug) + ' ' + c.title + '</h1>',
+    '<p class="tagline">' + c.intro + '</p>',
     sections,
     '<div class="reveal-card">',
-    '  ' + freshnessBadge('Confirmed') + '<p class="core" style="margin-top:0.8rem;"><strong>Sources:</strong> ' + g.sources.join(' &middot; ') + '</p>',
+    '  ' + freshnessBadge(c.freshness) + '<p class="core" style="margin-top:0.8rem;"><strong>Sources:</strong> ' + c.sources.join(' &middot; ') + '</p>',
     '</div>',
   ].join('\n');
 
   return pageShell({
-    title: g.title,
-    description: g.title + ' - a verified Diablo 4 Season 14 guide from Formwyn.',
+    title: c.title,
+    description: c.title + ' - a sourced Formwyn buying guide, last checked ' + c.lastChecked + '.',
     active: 'guides',
     body: body,
   });
 }
 
+function guidesIndexPage() {
+  const items = CATEGORY_ORDER.filter(function (slug) { return categories[slug]; }).map(function (slug) {
+    const c = categories[slug];
+    return '<li><a href="/guides/' + slug + '.html">' +
+      catIconBadge(slug) +
+      '<span class="label-block"><span class="name">' + c.title + '</span></span></a></li>';
+  }).join('\n');
+
+  const body = [
+    '<h1>Guides</h1>',
+    '<p class="tagline">Category-by-category buying guides for small-room UK gaming setups - desks, chairs, monitor arms, cable management, lighting, and mini PCs. Nothing goes live until it is actually sourced.</p>',
+    '<ul class="class-grid">' + items + '</ul>',
+  ].join('\n');
+
+  return pageShell({
+    title: 'Guides',
+    description: 'Formwyn gaming setup guides - desks, chairs, monitor arms, cable management, lighting, mini PCs.',
+    active: 'guides',
+    body: body,
+  });
+}
+
+function realSetupsPage() {
+  const body = [
+    '<h1>Real setups</h1>',
+    '<p class="tagline">This is a gallery of genuine reader-submitted small-room setups - no stock photos, no AI-generated "example" rooms. It starts empty because we\'d rather show nothing than fake something.</p>',
+    '<div class="reveal-card">',
+    '  <p class="narrator">Got a small-room gaming setup you\'re proud of?</p>',
+    '  <p class="core">Send us a photo and a couple of lines about your room, budget, and what you\'d change if you could. We\'ll credit you and feature real setups here as they come in - this section grows with the site, not before it.</p>',
+    '</div>',
+  ].join('\n');
+
+  return pageShell({
+    title: 'Real setups',
+    description: 'Genuine reader-submitted small-room gaming setups on Formwyn.',
+    active: 'real-setups',
+    body: body,
+  });
+}
+
 function patchTrackerPage() {
-  const rows = builds.map(function (b) {
+  const rows = setups.map(function (s) {
     return [
       '<tr>',
-      '<td>' + iconBadge(b.cls) + ' ' + b.cls + '</td>',
-      '<td>' + b.name + '</td>',
-      '<td class="freshness-cell ' + b.freshness + '">' + freshnessBadge(b.freshness) + '</td>',
-      '<td>' + b.last_checked + '</td>',
+      '<td>' + s.name + '</td>',
+      '<td class="freshness-cell ' + s.freshness + '">' + freshnessBadge(s.freshness) + '</td>',
+      '<td>' + s.last_checked + '</td>',
       '</tr>',
     ].join('');
   }).join('\n');
 
-  const tierRows = Object.keys(tierLists).map(function (cls) {
+  const catRows = CATEGORY_ORDER.filter(function (slug) { return categories[slug]; }).map(function (slug) {
+    const c = categories[slug];
     return [
       '<tr>',
-      '<td>' + cls + ' tier list</td>',
-      '<td>' + tierLists[cls].entries.length + ' ranked builds</td>',
-      '<td>' + freshnessBadge('Confirmed') + '</td>',
-      '<td>' + tierLists[cls].lastChecked + '</td>',
-      '</tr>',
-    ].join('');
-  }).join('\n');
-
-  const guideRows = Object.keys(guides).map(function (slug) {
-    return [
-      '<tr>',
-      '<td>Guide: ' + guides[slug].title + '</td>',
-      '<td>-</td>',
-      '<td>' + freshnessBadge('Confirmed') + '</td>',
-      '<td>' + guides[slug].lastChecked + '</td>',
+      '<td>Guide: ' + c.title + '</td>',
+      '<td class="freshness-cell ' + c.freshness + '">' + freshnessBadge(c.freshness) + '</td>',
+      '<td>' + c.lastChecked + '</td>',
       '</tr>',
     ].join('');
   }).join('\n');
 
   const body = [
     '<h1>Data freshness &amp; patch tracker</h1>',
-    '<p class="tagline">Every build on Formwyn carries a freshness state instead of a silent assumption that it is still correct. A weekly automated check watches for new seasons, patches, and hotfix-flagged builds and reports back for human review before anything changes here.</p>',
-    '<h2>Build library</h2>',
+    '<p class="tagline">Every setup and guide on Formwyn carries a freshness state instead of a silent assumption that prices are still current. Prices in this space move often - always confirm live price at the retailer before buying.</p>',
+    '<h2>Setup bundles</h2>',
     '<table class="freshness-table">',
-    '<thead><tr><th>Class</th><th>Build</th><th>Status</th><th>Last checked</th></tr></thead>',
+    '<thead><tr><th>Setup</th><th>Status</th><th>Last checked</th></tr></thead>',
     '<tbody>' + rows + '</tbody>',
     '</table>',
-    tierRows ? '<h2>Tier lists</h2><table class="freshness-table"><thead><tr><th>Section</th><th>Coverage</th><th>Status</th><th>Last checked</th></tr></thead><tbody>' + tierRows + '</tbody></table>' : '',
-    guideRows ? '<h2>Guides</h2><table class="freshness-table"><thead><tr><th>Section</th><th>Coverage</th><th>Status</th><th>Last checked</th></tr></thead><tbody>' + guideRows + '</tbody></table>' : '',
+    catRows ? '<h2>Guides</h2><table class="freshness-table"><thead><tr><th>Guide</th><th>Status</th><th>Last checked</th></tr></thead><tbody>' + catRows + '</tbody></table>' : '',
   ].join('\n');
-  return pageShell({ title: 'Data freshness & patch tracker', description: 'Freshness status for every verified Formwyn build, tier list, and guide.', active: 'home', body });
+  return pageShell({ title: 'Data freshness & patch tracker', description: 'Freshness status for every Formwyn setup bundle and guide.', active: 'home', body });
 }
 
-for (let i = 0; i < builds.length; i++) {
-  const b = builds[i];
-  fs.writeFileSync(path.join(root, 'builds', b.slug + '.html'), buildPage(b));
+fs.mkdirSync(path.join(root, 'setups'), { recursive: true });
+for (let i = 0; i < setups.length; i++) {
+  const s = setups[i];
+  fs.writeFileSync(path.join(root, 'setups', s.slug + '.html'), setupPage(s));
 }
-for (let i = 0; i < classes.length; i++) {
-  const cls = classes[i];
-  fs.writeFileSync(path.join(root, 'classes', classSlugFor(cls) + '.html'), classPage(cls));
-}
-fs.writeFileSync(path.join(root, 'classes.html'), classesIndexPage());
-
-fs.mkdirSync(path.join(root, 'tier-lists'), { recursive: true });
-for (let i = 0; i < classes.length; i++) {
-  const cls = classes[i];
-  fs.writeFileSync(path.join(root, 'tier-lists', classSlugFor(cls) + '.html'), tierListClassPage(cls));
-}
-fs.writeFileSync(path.join(root, 'tier-lists.html'), tierListIndexPage());
+fs.writeFileSync(path.join(root, 'setups.html'), setupsIndexPage());
 
 fs.mkdirSync(path.join(root, 'guides'), { recursive: true });
-for (let i = 0; i < GUIDE_ORDER.length; i++) {
-  const slug = GUIDE_ORDER[i];
-  if (guides[slug]) {
-    fs.writeFileSync(path.join(root, 'guides', slug + '.html'), guideDetailPage(slug));
-  }
+for (let i = 0; i < CATEGORY_ORDER.length; i++) {
+  const slug = CATEGORY_ORDER[i];
+  const page = categoryPage(slug);
+  if (page) fs.writeFileSync(path.join(root, 'guides', slug + '.html'), page);
 }
 fs.writeFileSync(path.join(root, 'guides.html'), guidesIndexPage());
 
+fs.writeFileSync(path.join(root, 'real-setups.html'), realSetupsPage());
 fs.writeFileSync(path.join(root, 'patch-tracker.html'), patchTrackerPage());
 
-console.log('Generated ' + builds.length + ' build pages, ' + classes.length + ' class pages, ' + classes.length + ' tier-list pages (' + Object.keys(tierLists).length + ' researched), ' + Object.keys(guides).length + ' guide pages, plus indexes and the patch tracker.');
+console.log('Generated ' + setups.length + ' setup pages, ' + Object.keys(categories).length + ' category guide pages, plus indexes, real-setups gallery, and the patch tracker.');

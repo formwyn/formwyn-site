@@ -1,14 +1,7 @@
 /**
  * Cloudflare Pages Function: POST /api/match
  * Body: { text: string, recentlyServed?: string[] }
- * Returns: { build, reveal, trace, tags }
- *
- * Adapted from the original Vercel-style handler (api/match.js, now
- * removed) after finding that Vercel's free Hobby tier explicitly
- * prohibits commercial use in its own terms - Formwyn is a commercial
- * project, so that plan was never actually usable. Cloudflare Pages'
- * free tier explicitly allows commercial use, so this is the real
- * deployment target instead.
+ * Returns: { setup, reveal, trace, tags }
  *
  * Requires ANTHROPIC_API_KEY set as an environment variable in the
  * Cloudflare Pages project settings - never hardcode it here, never
@@ -18,7 +11,7 @@
 const { extractTags } = require('../../lib/extract');
 const { match } = require('../../lib/match');
 const { formatReveal } = require('../../lib/reveal');
-const buildsData = require('../../data/builds.json');
+const setupsData = require('../../data/setups.json');
 
 function json(payload, status) {
   return new Response(JSON.stringify(payload), {
@@ -51,17 +44,15 @@ export async function onRequestPost(context) {
 
   try {
     const tags = await extractTags(text, apiKey);
-    const result = match(buildsData, tags, recentlyServed);
-    const reveal = formatReveal(result.build);
+    const result = match(setupsData, tags, recentlyServed);
+    const reveal = formatReveal(result.setup);
 
     return json({
       tags,
       trace: result.trace,
-      build: {
-        cls: result.build.cls,
-        name: result.build.name,
-        slug: result.build.slug,
-        classSlug: result.build.classSlug,
+      setup: {
+        name: result.setup.name,
+        slug: result.setup.slug,
       },
       reveal,
     });
