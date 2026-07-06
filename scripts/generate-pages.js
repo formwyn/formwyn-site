@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const { pageShell } = require('../lib/partials');
+const { classIcon, tierBadge, freshnessBadge } = require('../lib/icons');
 
 const root = path.join(__dirname, '..');
 const data = JSON.parse(fs.readFileSync(path.join(root, 'data', 'builds.json'), 'utf8'));
@@ -33,6 +34,10 @@ function buildSlugFor(slug) {
   return b ? b.slug : null;
 }
 
+function iconBadge(cls) {
+  return '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>';
+}
+
 function buildPage(b) {
   const freshnessLine = b.freshness === 'Confirmed'
     ? 'Verified for Season 14 - last checked ' + b.last_checked + '.'
@@ -40,11 +45,11 @@ function buildPage(b) {
 
   const body = [
     '<p><a href="/classes/' + b.classSlug + '.html">&larr; All ' + b.cls + ' builds</a></p>',
-    '<h1>' + b.name + '</h1>',
+    '<h1>' + iconBadge(b.cls) + ' ' + b.name + '</h1>',
     '<div class="reveal-card">',
     '  <p class="narrator">' + b.narrator + '</p>',
     '  <p class="core">' + b.core + '</p>',
-    '  <p class="freshness ' + b.freshness + '">' + freshnessLine + '</p>',
+    '  ' + freshnessBadge(b.freshness),
     '</div>',
   ].join('\n');
 
@@ -59,13 +64,16 @@ function buildPage(b) {
 function classPage(cls) {
   const clsBuilds = builds.filter(function (b) { return b.cls === cls; });
   const items = clsBuilds.map(function (b) {
-    return '<li><a href="/builds/' + b.slug + '.html">' + b.name +
-      '<span class="meta">' + b.feel.join(' . ') + ' . ' + b.complexity + '</span></a></li>';
+    return '<li><a href="/builds/' + b.slug + '.html">' +
+      '<span class="class-icon-badge">' + classIcon(cls, 18) + '</span>' +
+      '<span class="label-block"><span class="name">' + b.name + '</span>' +
+      '<span class="meta">' + b.feel.join(' &middot; ') + ' &middot; ' + b.complexity + '</span></span>' +
+      '</a></li>';
   }).join('\n');
 
   const body = [
     '<p><a href="/classes.html">&larr; All classes</a></p>',
-    '<h1>' + cls + '</h1>',
+    '<h1>' + iconBadge(cls) + ' ' + cls + '</h1>',
     '<ul class="build-grid">' + items + '</ul>',
   ].join('\n');
 
@@ -79,7 +87,12 @@ function classPage(cls) {
 
 function classesIndexPage() {
   const items = classes.map(function (cls) {
-    return '<li><a href="/classes/' + classSlugFor(cls) + '.html">' + cls + '</a></li>';
+    const count = builds.filter(function (b) { return b.cls === cls; }).length;
+    return '<li><a href="/classes/' + classSlugFor(cls) + '.html">' +
+      '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>' +
+      '<span class="label-block"><span class="name">' + cls + '</span>' +
+      '<span class="meta">' + count + ' builds</span></span>' +
+      '</a></li>';
   }).join('\n');
   const body = [
     '<h1>All builds</h1>',
@@ -97,8 +110,12 @@ function classesIndexPage() {
 function tierListIndexPage() {
   const items = classes.map(function (cls) {
     const has = !!tierLists[cls];
-    const label = has ? cls + '<span class="meta">Researched</span>' : cls + '<span class="meta">In research</span>';
-    return '<li><a href="/tier-lists/' + classSlugFor(cls) + '.html">' + label + '</a></li>';
+    const metaLabel = has ? 'Researched' : 'In research';
+    return '<li><a href="/tier-lists/' + classSlugFor(cls) + '.html">' +
+      '<span class="class-icon-badge">' + classIcon(cls, 20) + '</span>' +
+      '<span class="label-block"><span class="name">' + cls + '</span>' +
+      '<span class="meta">' + metaLabel + '</span></span>' +
+      '</a></li>';
   }).join('\n');
   const body = [
     '<h1>Tier lists</h1>',
@@ -115,7 +132,7 @@ function tierListClassPage(cls) {
   if (!tl) {
     const body = [
       '<p><a href="/tier-lists.html">&larr; All tier lists</a></p>',
-      '<h1>' + cls + ' tier list</h1>',
+      '<h1>' + iconBadge(cls) + ' ' + cls + ' tier list</h1>',
       '<div class="reveal-card">',
       '  <p class="narrator">Still being verified.</p>',
       '  <p class="core">We are not going to publish a ranking for ' + cls + ' until it has been cross-checked the same way the build library was - real sources, current-season tags, no guessing. Check back soon, or in the meantime browse the <a href="/classes/' + clsSlug + '.html">verified ' + cls + ' builds</a>.</p>',
@@ -131,7 +148,7 @@ function tierListClassPage(cls) {
       : e.buildName;
     return [
       '<tr>',
-      '<td class="tier-cell">' + e.tier + '</td>',
+      '<td class="tier-cell">' + tierBadge(e.tier) + '</td>',
       '<td>' + nameHtml + '</td>',
       '<td class="tagline" style="margin:0;">' + e.note + '</td>',
       '<td class="meta">' + e.sources.join('<br>') + '</td>',
@@ -145,7 +162,7 @@ function tierListClassPage(cls) {
 
   const body = [
     '<p><a href="/tier-lists.html">&larr; All tier lists</a></p>',
-    '<h1>' + cls + ' tier list</h1>',
+    '<h1>' + iconBadge(cls) + ' ' + cls + ' tier list</h1>',
     '<p class="tagline">' + tl.scope + ' - last checked ' + tl.lastChecked + '.</p>',
     '<table class="freshness-table">',
     '<thead><tr><th>Tier</th><th>Build</th><th>Why</th><th>Sources</th></tr></thead>',
@@ -167,7 +184,7 @@ const GUIDE_ORDER = ['leveling', 'legendary-farming', 'uniques-charms-seals'];
 function guidesIndexPage() {
   const items = GUIDE_ORDER.filter(function (slug) { return guides[slug]; }).map(function (slug) {
     const g = guides[slug];
-    return '<li><a href="/guides/' + slug + '.html">' + g.title + '</a></li>';
+    return '<li><a href="/guides/' + slug + '.html"><span class="label-block"><span class="name">' + g.title + '</span></span></a></li>';
   }).join('\n');
 
   const body = [
@@ -197,8 +214,7 @@ function guideDetailPage(slug) {
     '<p class="tagline">' + g.intro + '</p>',
     sections,
     '<div class="reveal-card">',
-    '  <p class="freshness Confirmed">Verified for Season 14 - last checked ' + g.lastChecked + '.</p>',
-    '  <p class="core"><strong>Sources:</strong> ' + g.sources.join(' &middot; ') + '</p>',
+    '  ' + freshnessBadge('Confirmed') + '<p class="core" style="margin-top:0.8rem;"><strong>Sources:</strong> ' + g.sources.join(' &middot; ') + '</p>',
     '</div>',
   ].join('\n');
 
@@ -214,9 +230,9 @@ function patchTrackerPage() {
   const rows = builds.map(function (b) {
     return [
       '<tr>',
-      '<td>' + b.cls + '</td>',
+      '<td>' + iconBadge(b.cls) + ' ' + b.cls + '</td>',
       '<td>' + b.name + '</td>',
-      '<td class="freshness-cell ' + b.freshness + '">' + b.freshness + '</td>',
+      '<td class="freshness-cell ' + b.freshness + '">' + freshnessBadge(b.freshness) + '</td>',
       '<td>' + b.last_checked + '</td>',
       '</tr>',
     ].join('');
@@ -227,7 +243,7 @@ function patchTrackerPage() {
       '<tr>',
       '<td>' + cls + ' tier list</td>',
       '<td>' + tierLists[cls].entries.length + ' ranked builds</td>',
-      '<td class="freshness-cell Confirmed">Researched</td>',
+      '<td>' + freshnessBadge('Confirmed') + '</td>',
       '<td>' + tierLists[cls].lastChecked + '</td>',
       '</tr>',
     ].join('');
@@ -238,7 +254,7 @@ function patchTrackerPage() {
       '<tr>',
       '<td>Guide: ' + guides[slug].title + '</td>',
       '<td>-</td>',
-      '<td class="freshness-cell Confirmed">Researched</td>',
+      '<td>' + freshnessBadge('Confirmed') + '</td>',
       '<td>' + guides[slug].lastChecked + '</td>',
       '</tr>',
     ].join('');
