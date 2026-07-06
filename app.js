@@ -4,7 +4,7 @@
 // client-side in localStorage and sent with each request so the variety
 // mechanism can de-weight repeats without needing server-side session state.
 
-const RECENCY_KEY = 'formwyn_recent_setups';
+const RECENCY_KEY = 'emberlo_recent_setups';
 const RECENCY_WINDOW = 3;
 
 function getRecent() {
@@ -54,7 +54,7 @@ function renderError(container, message) {
   `;
 }
 
-async function askFormwyn(text, container, button) {
+async function askEmberlo(text, container, button) {
   button.disabled = true;
   button.textContent = 'Putting your setup together…';
   try {
@@ -87,6 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
-    askFormwyn(textarea.value.trim(), container, button);
+    askEmberlo(textarea.value.trim(), container, button);
   });
 });
