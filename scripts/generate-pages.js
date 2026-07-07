@@ -40,16 +40,19 @@ function productCell(item) {
   return '<div class="product-cell">' + thumb + '<span>' + name + '</span></div>';
 }
 
+function itemShopCard(item) {
+  const media = item.image
+    ? '<img src="' + item.image + '" alt="' + item.product + '" loading="lazy">'
+    : '<span class="class-icon-badge"></span>';
+  const inner = '<div class="shop-card-media">' + media + '</div>' +
+    '<div class="shop-card-body"><h3>' + item.product + '</h3><p>' + item.category + ' &middot; ' + item.price + '</p></div>';
+  return item.url
+    ? '<a class="shop-card" href="' + item.url + '" target="_blank" rel="noopener">' + inner + '</a>'
+    : '<div class="shop-card">' + inner + '</div>';
+}
+
 function setupPage(s) {
-  const itemRows = s.items.map(function (item) {
-    return [
-      '<tr>',
-      '<td class="tier-cell">' + item.category + '</td>',
-      '<td>' + productCell(item) + '</td>',
-      '<td class="meta">' + item.price + '</td>',
-      '</tr>',
-    ].join('');
-  }).join('\n');
+  const itemCards = s.items.map(itemShopCard).join('\n');
 
   const freshnessLine = s.freshness === 'Confirmed'
     ? 'Verified pricing and availability - last checked ' + s.last_checked + '.'
@@ -60,10 +63,9 @@ function setupPage(s) {
     '<h1>' + s.name + '</h1>',
     '<div class="reveal-card">',
     '  <p class="narrator">' + s.narrator + '</p>',
-    '  <table class="freshness-table">',
-    '  <thead><tr><th>Category</th><th>Pick</th><th>Price</th></tr></thead>',
-    '  <tbody>' + itemRows + '</tbody>',
-    '  </table>',
+    '</div>',
+    '<div class="shop-grid" style="margin-top:1.5rem;">' + itemCards + '</div>',
+    '<div class="reveal-card" style="margin-top:1.5rem;">',
     '  <p class="core"><strong>Estimated total:</strong> ' + s.totalEstimate + '</p>',
     '  ' + freshnessBadge(s.freshness),
     '  <p class="tagline" style="margin-top:0.6rem;">' + freshnessLine + '</p>',
@@ -79,18 +81,27 @@ function setupPage(s) {
   });
 }
 
+function repImage(items) {
+  const withImg = (items || []).find(function (item) { return item.image; });
+  return withImg ? withImg.image : null;
+}
+
 function setupsIndexPage() {
   const items = setups.map(function (s) {
-    return '<li><a href="/setups/' + s.slug + '.html">' +
-      '<span class="label-block"><span class="name">' + s.name + '</span>' +
-      '<span class="meta">' + s.totalEstimate + ' &middot; ' + s.roomSize.replace('_', ' ').toLowerCase() + '</span></span>' +
-      '</a></li>';
+    const img = repImage(s.items);
+    const media = img
+      ? '<img src="' + img + '" alt="' + s.name + '" loading="lazy">'
+      : '<span class="class-icon-badge"></span>';
+    return '<a class="shop-card" href="/setups/' + s.slug + '.html">' +
+      '<div class="shop-card-media">' + media + '</div>' +
+      '<div class="shop-card-body"><h3>' + s.name + '</h3><p>' + s.totalEstimate + ' &middot; ' + s.roomSize.replace('_', ' ').toLowerCase() + '</p></div>' +
+      '</a>';
   }).join('\n');
 
   const body = [
     '<h1>All setups</h1>',
     '<p class="tagline">Complete, real-priced home decor bundles for small UK rooms - every pick sourced and freshness-tagged, same rule as everywhere else on emberlo.</p>',
-    '<ul class="class-grid build-grid">' + items + '</ul>',
+    '<div class="shop-grid" style="margin-top:1.5rem;">' + items + '</div>',
   ].join('\n');
 
   return pageShell({
@@ -137,15 +148,20 @@ function categoryPage(slug) {
 function guidesIndexPage() {
   const items = CATEGORY_ORDER.filter(function (slug) { return categories[slug]; }).map(function (slug) {
     const c = categories[slug];
-    return '<li><a href="/guides/' + slug + '.html">' +
-      catIconBadge(slug) +
-      '<span class="label-block"><span class="name">' + c.title + '</span></span></a></li>';
+    const img = repImage(c.productLinks);
+    const media = img
+      ? '<img src="' + img + '" alt="' + c.title + '" loading="lazy">'
+      : categoryIcon(slug, 42);
+    return '<a class="shop-card" href="/guides/' + slug + '.html">' +
+      '<div class="shop-card-media">' + media + '</div>' +
+      '<div class="shop-card-body"><h3>' + c.title + '</h3></div>' +
+      '</a>';
   }).join('\n');
 
   const body = [
     '<h1>Guides</h1>',
     '<p class="tagline">Category-by-category buying guides for small-space UK home decor - storage, lighting, soft furnishings, wall decor, small furniture, and a desk corner. Nothing goes live until it is actually sourced.</p>',
-    '<ul class="class-grid">' + items + '</ul>',
+    '<div class="shop-grid" style="margin-top:1.5rem;">' + items + '</div>',
   ].join('\n');
 
   return pageShell({

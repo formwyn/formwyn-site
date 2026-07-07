@@ -10,8 +10,7 @@
 <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-<div class="wrap">
-<header class="site">
+<header class="site" style="max-width:900px;margin:0 auto;padding:0 1.5rem;">
   <a class="brand" href="/">emberlo</a>
   <nav>
     <a href="/" class="active">Home</a>
@@ -23,31 +22,92 @@
   </nav>
 </header>
 
-<h1>Small-space home decor that fits real UK rooms, not showrooms.</h1>
-<p class="tagline">Most home decor content is written for a photogenic US apartment with a landlord who doesn't mind holes in the wall. emberlo is built around the actual UK constraint — box rooms, shared spaces, rented walls — with real prices and honest recommendations, not stock-photo aspiration.</p>
-
-<div class="path-grid">
-  <a class="path-card" href="/get-my-setup.html">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color: var(--olive); margin-bottom: 0.9rem;">
-      <path d="M12 3 4 7v6c0 4.5 3.4 7.7 8 9 4.6-1.3 8-4.5 8-9V7z" stroke-linejoin="round"/>
-      <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    <p class="path-eyebrow">Describe it</p>
-    <h2>Get my setup</h2>
-    <p class="desc">Tell us your room size, budget, tenancy, and what matters most — storage, comfort, keeping your deposit — and get a complete, priced setup back.</p>
+<section class="hero">
+  <h1 class="hero-wordmark">emberlo</h1>
+  <p class="hero-tagline">Small-space home decor that fits real UK rooms, not showrooms. Real prices, real retailers, honest recommendations for box rooms, shared spaces, and rented walls.</p>
+  <div class="hero-ctas">
+    <a class="btn-primary" href="/get-my-setup.html">Describe your room</a>
+    <a class="btn-secondary" href="#shop">Browse the shop &darr;</a>
+  </div>
+  <a class="hero-scroll-cue" href="#shop" aria-label="Scroll to browse">
+    <span>Scroll</span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M6 13l6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </a>
-  <a class="path-card" href="/setups.html">
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color: var(--tier-s); margin-bottom: 0.9rem;">
-      <path d="M4 20h16M6 20V10l3 2 3-5 3 5 3-2v10" stroke-linejoin="round" stroke-linecap="round"/>
-    </svg>
-    <p class="path-eyebrow">Browse</p>
-    <h2>See every setup</h2>
-    <p class="desc">Prefer to browse? Every complete setup bundle we recommend, sorted by room size and budget.</p>
-  </a>
-</div>
+</section>
 
-<p><a href="/guides.html">Dig into a single category — storage, lighting, soft furnishings, wall decor, small furniture, desk corner &rarr;</a></p>
-<p><a href="/trending.html">Or see what's actually trending in small-space UK decor right now &rarr;</a></p>
+<div class="wrap">
+<section class="shop-section will-reveal" id="shop">
+  <h2>Shop by category</h2>
+  <p class="shop-section-intro">Every category is sourced and freshness-tagged — real retailers, real current prices, no fabricated photos.</p>
+  <div class="shop-grid">
+    <a class="shop-card" href="/guides/storage.html">
+      <div class="shop-card-media">
+        <svg class="class-icon" width="42" height="42" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="5" width="16" height="14" rx="1.2" fill="none" stroke-width="1.8"/><path d="M4 10h16" stroke-width="1.8"/><path d="M9 13.5h6" stroke-width="1.8" stroke-linecap="round"/></svg>
+      </div>
+      <div class="shop-card-body"><h3>Storage</h3><p>No-drill solutions for rented rooms</p></div>
+    </a>
+    <a class="shop-card" href="/guides/lighting.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&amp;w=620&amp;h=620" alt="Argos Rayner Plug-In Wall Light" loading="lazy"></div>
+      <div class="shop-card-body"><h3>Lighting</h3><p>Plug-in — no electrician needed</p></div>
+    </a>
+    <a class="shop-card" href="/guides/soft-furnishings.html">
+      <div class="shop-card-media"><img src="https://images.dunelm.com/30826699.jpg?$standardplayerdefault$&amp;img404=noimagedefault" alt="Dunelm chunky knit throw" loading="lazy"></div>
+      <div class="shop-card-body"><h3>Soft furnishings</h3><p>Cushions, throws and rugs</p></div>
+    </a>
+    <a class="shop-card" href="/guides/wall-decor.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&amp;w=620&amp;h=620" alt="Command Picture Hanging Strips" loading="lazy"></div>
+      <div class="shop-card-body"><h3>Wall decor</h3><p>Hangs and holds, no drilling</p></div>
+    </a>
+    <a class="shop-card" href="/guides/small-furniture.html">
+      <div class="shop-card-media"><img src="https://images.dunelm.com/30723929.jpg?$standardplayerdefault$&amp;img404=noimagedefault" alt="Dunelm storage ottoman" loading="lazy"></div>
+      <div class="shop-card-body"><h3>Small furniture</h3><p>Multi-use pieces for tight rooms</p></div>
+    </a>
+    <a class="shop-card" href="/guides/desk-workspace.html">
+      <div class="shop-card-media">
+        <svg class="class-icon" width="42" height="42" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="15" width="18" height="2.2" rx="0.5"/><path d="M5 17v4M19 17v4" stroke-width="2"/><path d="M3 15l2-6h14l2 6" fill="none" stroke-width="1.6"/></svg>
+      </div>
+      <div class="shop-card-body"><h3>Desk corner</h3><p>A workspace that doesn't take over</p></div>
+    </a>
+  </div>
+</section>
+
+<section class="shop-section will-reveal">
+  <h2>Browse every setup</h2>
+  <p class="shop-section-intro">Complete, priced bundles — pick one that matches your room, or describe yours and let emberlo match one for you.</p>
+  <div class="shop-grid">
+    <a class="shop-card" href="/setups/renters-starter-kit.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&amp;w=620&amp;h=620" alt="The Renter's Starter Kit" loading="lazy"></div>
+      <div class="shop-card-body"><h3>The Renter's Starter Kit</h3><p>~£47-£53 &middot; box room</p></div>
+    </a>
+    <a class="shop-card" href="/setups/cosy-corner.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&amp;w=620&amp;h=620" alt="The Cosy Corner" loading="lazy"></div>
+      <div class="shop-card-body"><h3>The Cosy Corner</h3><p>~£93-£97 &middot; standard room</p></div>
+    </a>
+    <a class="shop-card" href="/setups/storage-strapped-studio.html">
+      <div class="shop-card-media"><img src="https://images.dunelm.com/30723929.jpg?$standardplayerdefault$&amp;img404=noimagedefault" alt="The Storage-Strapped Studio" loading="lazy"></div>
+      <div class="shop-card-body"><h3>The Storage-Strapped Studio</h3><p>~£66-£86 &middot; shared room</p></div>
+    </a>
+    <a class="shop-card" href="/setups/small-space-home-office.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&amp;w=620&amp;h=620" alt="The Small-Space Home Office Corner" loading="lazy"></div>
+      <div class="shop-card-body"><h3>The Small-Space Home Office Corner</h3><p>~£89-£109 &middot; box room</p></div>
+    </a>
+    <a class="shop-card" href="/setups/blank-wall-fix.html">
+      <div class="shop-card-media"><img src="https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&amp;w=620&amp;h=620" alt="The Blank Wall Fix" loading="lazy"></div>
+      <div class="shop-card-body"><h3>The Blank Wall Fix</h3><p>~£40-£51 &middot; standard room</p></div>
+    </a>
+    <a class="shop-card" href="/get-my-setup.html">
+      <div class="shop-card-media">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="color: var(--olive);">
+          <path d="M12 3 4 7v6c0 4.5 3.4 7.7 8 9 4.6-1.3 8-4.5 8-9V7z" stroke-linejoin="round"/>
+          <path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="shop-card-body"><h3>Not sure which?</h3><p>Describe your room and get matched</p></div>
+    </a>
+  </div>
+</section>
+
+<p style="margin-top:2.5rem;"><a href="/trending.html">See what's actually trending in small-space UK decor right now &rarr;</a></p>
 
 <footer class="site">
   <p>emberlo — home decor guidance for small UK rooms and rented spaces. Product and retailer names are trademarks of their respective owners; emberlo is not affiliated with them. Some links may be affiliate links.</p>

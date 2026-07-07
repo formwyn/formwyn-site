@@ -445,6 +445,121 @@ p.freshness.Provisional { color: var(--provisional); }
   border-radius: 10px;
 }
 
+/* ---------- Hero (landing) ---------- */
+
+.hero {
+  min-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  position: relative;
+}
+
+.hero-wordmark {
+  font-family: 'Fraunces', serif;
+  font-weight: 800;
+  font-size: clamp(3.2rem, 13vw, 8.5rem);
+  line-height: 1;
+  margin: 0 0 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-tagline {
+  max-width: 40rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--text-dim);
+  margin: 0 0 2.2rem;
+}
+
+.hero-ctas { display: flex; gap: 0.9rem; flex-wrap: wrap; justify-content: center; }
+
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary { background: var(--terracotta); color: #fff8ef; }
+.btn-primary:hover { background: var(--terracotta-bright); color: #fff8ef; transform: translateY(-2px); }
+
+.btn-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border-bright); }
+.btn-secondary:hover { border-color: var(--terracotta); color: var(--terracotta); transform: translateY(-2px); }
+
+.hero-scroll-cue {
+  position: absolute;
+  bottom: 1.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-faint);
+  font-size: 0.78rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  animation: bob 2.2s ease-in-out infinite;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 6px); }
+}
+
+/* ---------- Shop grid (image cards) ---------- */
+
+.shop-section { padding: 3.5rem 0 1rem; }
+.shop-section h2 { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.shop-section .shop-section-intro { color: var(--text-dim); margin: 0 0 1.8rem; max-width: 36rem; }
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.1rem;
+}
+
+.shop-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.shop-card:hover { transform: translateY(-4px); border-color: var(--terracotta); box-shadow: var(--shadow-glow); }
+
+.shop-card-media {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  background: var(--bg-panel-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.shop-card-media img { width: 100%; height: 100%; object-fit: cover; }
+.shop-card-media .class-icon { width: 42px; height: 42px; color: var(--olive); }
+
+.shop-card-body { padding: 0.95rem 1.05rem 1.15rem; }
+.shop-card-body h3 { margin: 0 0 0.3rem; font-size: 1.02rem; font-family: 'Fraunces', serif; font-weight: 600; }
+.shop-card-body p { margin: 0; font-size: 0.83rem; color: var(--text-faint); }
+
+/* Progressive-enhancement scroll reveal — only hidden once JS adds .will-reveal,
+   so content is always visible if JS doesn't run. */
+.will-reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.will-reveal.revealed { opacity: 1; transform: translateY(0); }
+
 /* ---------- Footer ---------- */
 
 footer.site {

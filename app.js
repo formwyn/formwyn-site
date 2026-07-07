@@ -24,29 +24,23 @@ function pushRecent(name) {
 
 function renderReveal(container, data) {
   const { reveal, setup } = data;
-  const itemRows = (reveal.items || []).map((item) => {
-    const thumb = item.image
-      ? `<img class="product-thumb" src="${item.image}" alt="${item.product}" loading="lazy">`
-      : `<span class="product-thumb product-thumb-fallback"></span>`;
-    const name = item.url
-      ? `<a href="${item.url}" target="_blank" rel="noopener">${item.product}</a>`
-      : item.product;
-    return `
-    <tr>
-      <td>${item.category}</td>
-      <td><div class="product-cell">${thumb}<span>${name}</span></div></td>
-      <td>${item.price}</td>
-    </tr>
-  `;
+  const itemCards = (reveal.items || []).map((item) => {
+    const media = item.image
+      ? `<img src="${item.image}" alt="${item.product}" loading="lazy">`
+      : `<span class="class-icon-badge"></span>`;
+    const inner = `<div class="shop-card-media">${media}</div>
+      <div class="shop-card-body"><h3>${item.product}</h3><p>${item.category} &middot; ${item.price}</p></div>`;
+    return item.url
+      ? `<a class="shop-card" href="${item.url}" target="_blank" rel="noopener">${inner}</a>`
+      : `<div class="shop-card">${inner}</div>`;
   }).join('');
 
   container.innerHTML = `
     <div class="reveal-card">
       <p class="narrator">${reveal.narrator}</p>
-      <table class="freshness-table">
-        <thead><tr><th>Category</th><th>Pick</th><th>Price</th></tr></thead>
-        <tbody>${itemRows}</tbody>
-      </table>
+    </div>
+    <div class="shop-grid" style="margin-top:1.2rem;">${itemCards}</div>
+    <div class="reveal-card" style="margin-top:1.2rem;">
       <p class="core"><strong>Estimated total:</strong> ${reveal.totalEstimate}</p>
       <p class="freshness ${reveal.freshnessState}">${reveal.freshnessLine}</p>
       <a class="permalink" href="/setups/${setup.slug}.html">Permalink for ${setup.name}</a>
@@ -97,4 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     askEmberlo(textarea.value.trim(), container, button);
   });
+});
+
+// Progressive-enhancement scroll-reveal for shop sections on the homepage.
+// CSS only hides .will-reveal elements once this JS actually adds the
+// .revealed class via IntersectionObserver — if JS fails to run, the
+// elements never get hidden in the first place (see .will-reveal in
+// styles.css), so content is always visible either way.
+document.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.will-reveal');
+  if (!targets.length || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  targets.forEach((el) => io.observe(el));
 });
