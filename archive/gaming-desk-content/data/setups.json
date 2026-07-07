@@ -1,0 +1,224 @@
+{
+  "setups": [
+    {
+      "name": "The Box Room Starter",
+      "slug": "box-room-starter",
+      "roomSize": "BOX_ROOM",
+      "priorities": [
+        "BUDGET_FIRST",
+        "MINIMAL_FOOTPRINT"
+      ],
+      "budget": "ULTRA_BUDGET",
+      "tenancy": "RENTER",
+      "narrator": "The cheapest setup that still actually works \u2014 no wasted RGB branding, no clamps, nothing your landlord will notice.",
+      "items": [
+        {
+          "category": "Desk",
+          "product": "IKEA LAGKAPTEN (top) + ADILS (legs)",
+          "price": "~\u00a355-\u00a365",
+          "note": "Not marketed as a 'gaming desk' at all \u2014 flat, sturdy, no wasted bulk. 120cm fits most UK box rooms."
+        },
+        {
+          "category": "Chair",
+          "product": "bigzzia Gaming Chair",
+          "price": "~\u00a345-\u00a350",
+          "note": "No footrest, which keeps the price and the footprint down \u2014 the honest pick for a genuinely tiny room."
+        },
+        {
+          "category": "Cable management",
+          "product": "Budget mesh under-desk tray",
+          "price": "~\u00a315",
+          "note": "Catches the power strip and bulk cabling in one go."
+        }
+      ],
+      "totalEstimate": "~\u00a3115-\u00a3130",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-06",
+      "sources": [
+        "Cross-referenced UK retail listings and 2026 desk/chair buying-guide coverage \u2014 see category guides for detail."
+      ]
+    },
+    {
+      "name": "The Corner Maximiser",
+      "slug": "corner-maximiser",
+      "roomSize": "BOX_ROOM",
+      "priorities": [
+        "STORAGE",
+        "BUDGET_FIRST"
+      ],
+      "budget": "BUDGET",
+      "tenancy": "RENTER",
+      "narrator": "Uses the room's corner instead of eating a whole wall \u2014 built for a box room that needs storage more than style.",
+      "items": [
+        {
+          "category": "Desk",
+          "product": "HOMIDEC L-Shaped",
+          "price": "~\u00a379-\u00a399",
+          "note": "L-shaped desks use a corner instead of a whole wall \u2014 more surface area per square foot of room than a straight desk."
+        },
+        {
+          "category": "Chair",
+          "product": "Racingreat Ergonomic Gaming Chair",
+          "price": "~\u00a355 or under",
+          "note": "Compact base footprint, no bulky footrest, adjustable seat height and lumbar cushion at the price."
+        },
+        {
+          "category": "Cable management",
+          "product": "Budget mesh under-desk tray",
+          "price": "~\u00a315-\u00a320",
+          "note": "Same starting point regardless of budget tier \u2014 always worth it first."
+        }
+      ],
+      "totalEstimate": "~\u00a3150-\u00a3185",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-06",
+      "sources": [
+        "Cross-referenced UK retail listings and 2026 desk/chair buying-guide coverage \u2014 see category guides for detail."
+      ]
+    },
+    {
+      "name": "The Renter-Friendly All-Rounder",
+      "slug": "renter-friendly-all-rounder",
+      "roomSize": "SHARED_ROOM",
+      "priorities": [
+        "MULTIPURPOSE",
+        "COMFORT"
+      ],
+      "budget": "MID",
+      "tenancy": "RENTER",
+      "narrator": "Built to double as a proper desk for work or study as well as gaming, with nothing that needs drilling into a wall.",
+      "items": [
+        {
+          "category": "Desk",
+          "product": "IKEA Utespelare",
+          "price": "~\u00a3129",
+          "note": "A proper gaming desk sized sensibly for UK rooms, solid build quality, widely stocked."
+        },
+        {
+          "category": "Chair",
+          "product": "Symino Gaming Chair",
+          "price": "~\u00a365-\u00a375",
+          "note": "Footrest folds away when not needed \u2014 useful when the desk is doing double duty as a workspace."
+        },
+        {
+          "category": "Monitor arm",
+          "product": "Ergotron LX",
+          "price": "~\u00a3130",
+          "note": "Desk-clamp mount, not wall-mounted \u2014 frees desk surface without needing landlord permission."
+        },
+        {
+          "category": "Cable management",
+          "product": "Complete cable management kit",
+          "price": "~\u00a328-\u00a335",
+          "note": "Bundled kit works out cheaper than buying a tray, ties, clips and sleeves separately."
+        }
+      ],
+      "totalEstimate": "~\u00a3350-\u00a3370",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-06",
+      "sources": [
+        "Cross-referenced UK retail listings and 2026 desk/chair/monitor-arm buying-guide coverage \u2014 see category guides for detail."
+      ]
+    },
+    {
+      "name": "The Storage-Strapped Streamer",
+      "slug": "storage-strapped-streamer",
+      "roomSize": "STANDARD_ROOM",
+      "priorities": [
+        "STORAGE",
+        "STREAMING_READY",
+        "AESTHETICS"
+      ],
+      "budget": "PREMIUM",
+      "tenancy": "HOMEOWNER",
+      "narrator": "For a room with space to commit \u2014 storage-first desk, real bias lighting, and a monitor arm that keeps the desk clear for a camera and mic.",
+      "items": [
+        {
+          "category": "Desk",
+          "product": "Coleshome (storage-focused)",
+          "price": "~\u00a389-\u00a3119",
+          "note": "Prioritises built-in storage over raw surface area \u2014 useful when there's nowhere else to put headsets and controllers."
+        },
+        {
+          "category": "Chair",
+          "product": "SONGMICS Racing Gaming Chair OBG073BH08",
+          "price": "~\u00a390 or under",
+          "note": "The most solid construction found under \u00a390 in current UK comparisons."
+        },
+        {
+          "category": "Monitor arm",
+          "product": "Ergotron LX",
+          "price": "~\u00a3130",
+          "note": "Frees the desk surface for a camera/mic setup \u2014 25kg capacity, fits monitors up to 34in."
+        },
+        {
+          "category": "Lighting",
+          "product": "Govee Strip Light 2 Pro",
+          "price": "~\u00a3100",
+          "note": "Wireless control, wide colour range, syncs with Corsair iCUE if the rest of the setup is Corsair gear."
+        },
+        {
+          "category": "Cable management",
+          "product": "Complete cable management kit",
+          "price": "~\u00a328-\u00a335",
+          "note": "Same bundled-kit logic applies regardless of budget tier."
+        }
+      ],
+      "totalEstimate": "~\u00a3440-\u00a3470",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-06",
+      "sources": [
+        "Cross-referenced UK retail listings and 2026 desk/chair/monitor-arm/lighting buying-guide coverage \u2014 see category guides for detail."
+      ]
+    },
+    {
+      "name": "The Ultra-Tight Space",
+      "slug": "ultra-tight-space",
+      "roomSize": "BOX_ROOM",
+      "priorities": [
+        "MINIMAL_FOOTPRINT",
+        "BUDGET_FIRST"
+      ],
+      "budget": "BUDGET",
+      "tenancy": "RENTER",
+      "narrator": "For a room that genuinely can't fit a tower anywhere \u2014 built around a mini PC instead of assuming a full-size case.",
+      "items": [
+        {
+          "category": "Desk",
+          "product": "IKEA LAGKAPTEN (top) + ADILS (legs)",
+          "price": "~\u00a355-\u00a365",
+          "note": "Flat surface area matters more than storage when the PC itself isn't taking up desk space."
+        },
+        {
+          "category": "Chair",
+          "product": "bigzzia Gaming Chair",
+          "price": "~\u00a345-\u00a350",
+          "note": "Minimal footprint, no footrest \u2014 matches the room."
+        },
+        {
+          "category": "Mini PC",
+          "product": "Geekom AX8 Pro",
+          "price": "Check current price \u2014 not confirmed in this research pass",
+          "note": "Genuinely small footprint with real gaming capability, not just a media-box PC. Flagging price as unconfirmed rather than guessing."
+        },
+        {
+          "category": "Cable management",
+          "product": "Budget mesh under-desk tray",
+          "price": "~\u00a315",
+          "note": "Even more valuable here since a mini PC means more small cables, not fewer."
+        }
+      ],
+      "totalEstimate": "~\u00a3115-\u00a3130 plus mini PC (price to confirm)",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-06",
+      "sources": [
+        "Cross-referenced UK retail listings and 2026 desk/chair/mini-PC buying-guide coverage \u2014 see category guides for detail. Mini PC pricing not independently confirmed this pass."
+      ]
+    }
+  ],
+  "blankSlatePool": [
+    "box-room-starter",
+    "corner-maximiser",
+    "renter-friendly-all-rounder"
+  ]
+}

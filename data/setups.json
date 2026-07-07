@@ -1,224 +1,217 @@
 {
   "setups": [
     {
-      "name": "The Box Room Starter",
-      "slug": "box-room-starter",
+      "name": "The Renter's Starter Kit",
+      "slug": "renters-starter-kit",
       "roomSize": "BOX_ROOM",
       "priorities": [
         "BUDGET_FIRST",
-        "MINIMAL_FOOTPRINT"
+        "RENTAL_SAFE"
       ],
       "budget": "ULTRA_BUDGET",
       "tenancy": "RENTER",
-      "narrator": "The cheapest setup that still actually works \u2014 no wasted RGB branding, no clamps, nothing your landlord will notice.",
+      "narrator": "The cheapest way to make a rented room feel like yours — nothing that needs a drill, nothing your landlord will notice when you leave.",
       "items": [
         {
-          "category": "Desk",
-          "product": "IKEA LAGKAPTEN (top) + ADILS (legs)",
-          "price": "~\u00a355-\u00a365",
-          "note": "Not marketed as a 'gaming desk' at all \u2014 flat, sturdy, no wasted bulk. 120cm fits most UK box rooms."
+          "category": "Storage",
+          "product": "SONGMICS Over-Door Organiser",
+          "price": "~£15-£21",
+          "note": "No drilling — turns unused door space into actual storage."
         },
         {
-          "category": "Chair",
-          "product": "bigzzia Gaming Chair",
-          "price": "~\u00a345-\u00a350",
-          "note": "No footrest, which keeps the price and the footprint down \u2014 the honest pick for a genuinely tiny room."
+          "category": "Wall decor",
+          "product": "Command Picture Hanging Extra Large Strips (Set of 10)",
+          "price": "~£13",
+          "note": "Holds up to 7.2kg — the honest way to hang art without losing your deposit."
         },
         {
-          "category": "Cable management",
-          "product": "Budget mesh under-desk tray",
-          "price": "~\u00a315",
-          "note": "Catches the power strip and bulk cabling in one go."
+          "category": "Soft furnishings",
+          "product": "IKEA GURLI cushion covers x2",
+          "price": "~£10",
+          "note": "The cheapest single swap that actually changes how a room feels."
+        },
+        {
+          "category": "Storage",
+          "product": "IKEA SKUBB storage boxes (set of 6)",
+          "price": "~£9",
+          "note": "Collapse flat when not needed — useful for a tenancy that might end."
         }
       ],
-      "totalEstimate": "~\u00a3115-\u00a3130",
+      "totalEstimate": "~£47-£53",
       "freshness": "Provisional",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-07-07",
       "sources": [
-        "Cross-referenced UK retail listings and 2026 desk/chair buying-guide coverage \u2014 see category guides for detail."
+        "Cross-referenced UK retail listings, July 2026 — see category guides for detail."
       ]
     },
     {
-      "name": "The Corner Maximiser",
-      "slug": "corner-maximiser",
-      "roomSize": "BOX_ROOM",
+      "name": "The Cosy Corner",
+      "slug": "cosy-corner",
+      "roomSize": "STANDARD_ROOM",
       "priorities": [
-        "STORAGE",
-        "BUDGET_FIRST"
+        "AESTHETICS",
+        "COMFORT"
       ],
       "budget": "BUDGET",
       "tenancy": "RENTER",
-      "narrator": "Uses the room's corner instead of eating a whole wall \u2014 built for a box room that needs storage more than style.",
+      "narrator": "Layering, not renovating — the small stuff that actually makes a room feel warm.",
       "items": [
         {
-          "category": "Desk",
-          "product": "HOMIDEC L-Shaped",
-          "price": "~\u00a379-\u00a399",
-          "note": "L-shaped desks use a corner instead of a whole wall \u2014 more surface area per square foot of room than a straight desk."
+          "category": "Lighting",
+          "product": "Argos Rayner Plug-In Wall Light",
+          "price": "~£19",
+          "note": "No electrician needed — plugs straight into an existing socket."
         },
         {
-          "category": "Chair",
-          "product": "Racingreat Ergonomic Gaming Chair",
-          "price": "~\u00a355 or under",
-          "note": "Compact base footprint, no bulky footrest, adjustable seat height and lumbar cushion at the price."
+          "category": "Soft furnishings",
+          "product": "IKEA TIPHEDE or KNARDRUP small rug",
+          "price": "~£15-£19",
+          "note": "Big enough to anchor the seating area — a rug that 'floats' between furniture makes a room look smaller, not bigger."
         },
         {
-          "category": "Cable management",
-          "product": "Budget mesh under-desk tray",
-          "price": "~\u00a315-\u00a320",
-          "note": "Same starting point regardless of budget tier \u2014 always worth it first."
+          "category": "Soft furnishings",
+          "product": "Dunelm chunky knit throw",
+          "price": "~£10-£20 (check live price)",
+          "note": "Texture over pattern — the layering trick most 2026 living-room guides lean on."
+        },
+        {
+          "category": "Soft furnishings",
+          "product": "IKEA GURLI cushion covers x2",
+          "price": "~£10",
+          "note": "Three to five cushions is the sweet spot before it starts eating seating space."
         }
       ],
-      "totalEstimate": "~\u00a3150-\u00a3185",
+      "totalEstimate": "~£54-£68",
       "freshness": "Provisional",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-07-07",
       "sources": [
-        "Cross-referenced UK retail listings and 2026 desk/chair buying-guide coverage \u2014 see category guides for detail."
+        "Cross-referenced UK retail listings, July 2026 — see category guides for detail."
       ]
     },
     {
-      "name": "The Renter-Friendly All-Rounder",
-      "slug": "renter-friendly-all-rounder",
+      "name": "The Storage-Strapped Studio",
+      "slug": "storage-strapped-studio",
       "roomSize": "SHARED_ROOM",
       "priorities": [
-        "MULTIPURPOSE",
-        "COMFORT"
+        "STORAGE",
+        "MULTIPURPOSE"
       ],
       "budget": "MID",
       "tenancy": "RENTER",
-      "narrator": "Built to double as a proper desk for work or study as well as gaming, with nothing that needs drilling into a wall.",
+      "narrator": "For a room that has to do more than one job — storage that doesn't eat floor space.",
       "items": [
         {
-          "category": "Desk",
-          "product": "IKEA Utespelare",
-          "price": "~\u00a3129",
-          "note": "A proper gaming desk sized sensibly for UK rooms, solid build quality, widely stocked."
+          "category": "Small furniture",
+          "product": "Dunelm storage ottoman",
+          "price": "~£32-£35",
+          "note": "Doubles as seating, coffee table, and storage in one — the best pound-for-pound multi-use buy."
         },
         {
-          "category": "Chair",
-          "product": "Symino Gaming Chair",
-          "price": "~\u00a365-\u00a375",
-          "note": "Footrest folds away when not needed \u2014 useful when the desk is doing double duty as a workspace."
+          "category": "Storage",
+          "product": "SONGMICS Over-Door Organiser",
+          "price": "~£15-£21",
+          "note": "No drilling required."
         },
         {
-          "category": "Monitor arm",
-          "product": "Ergotron LX",
-          "price": "~\u00a3130",
-          "note": "Desk-clamp mount, not wall-mounted \u2014 frees desk surface without needing landlord permission."
+          "category": "Wall decor",
+          "product": "No-drill adhesive floating shelf",
+          "price": "~£22-£33",
+          "note": "Adhesive-mounted — no bracket, no drilling. Lightweight items only."
         },
         {
-          "category": "Cable management",
-          "product": "Complete cable management kit",
-          "price": "~\u00a328-\u00a335",
-          "note": "Bundled kit works out cheaper than buying a tray, ties, clips and sleeves separately."
+          "category": "Storage",
+          "product": "IKEA SKUBB storage boxes (set of 6)",
+          "price": "~£9",
+          "note": "Collapse flat when empty."
         }
       ],
-      "totalEstimate": "~\u00a3350-\u00a3370",
+      "totalEstimate": "~£78-£98",
       "freshness": "Provisional",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-07-07",
       "sources": [
-        "Cross-referenced UK retail listings and 2026 desk/chair/monitor-arm buying-guide coverage \u2014 see category guides for detail."
+        "Cross-referenced UK retail listings, July 2026 — see category guides for detail."
       ]
     },
     {
-      "name": "The Storage-Strapped Streamer",
-      "slug": "storage-strapped-streamer",
-      "roomSize": "STANDARD_ROOM",
-      "priorities": [
-        "STORAGE",
-        "STREAMING_READY",
-        "AESTHETICS"
-      ],
-      "budget": "PREMIUM",
-      "tenancy": "HOMEOWNER",
-      "narrator": "For a room with space to commit \u2014 storage-first desk, real bias lighting, and a monitor arm that keeps the desk clear for a camera and mic.",
-      "items": [
-        {
-          "category": "Desk",
-          "product": "Coleshome (storage-focused)",
-          "price": "~\u00a389-\u00a3119",
-          "note": "Prioritises built-in storage over raw surface area \u2014 useful when there's nowhere else to put headsets and controllers."
-        },
-        {
-          "category": "Chair",
-          "product": "SONGMICS Racing Gaming Chair OBG073BH08",
-          "price": "~\u00a390 or under",
-          "note": "The most solid construction found under \u00a390 in current UK comparisons."
-        },
-        {
-          "category": "Monitor arm",
-          "product": "Ergotron LX",
-          "price": "~\u00a3130",
-          "note": "Frees the desk surface for a camera/mic setup \u2014 25kg capacity, fits monitors up to 34in."
-        },
-        {
-          "category": "Lighting",
-          "product": "Govee Strip Light 2 Pro",
-          "price": "~\u00a3100",
-          "note": "Wireless control, wide colour range, syncs with Corsair iCUE if the rest of the setup is Corsair gear."
-        },
-        {
-          "category": "Cable management",
-          "product": "Complete cable management kit",
-          "price": "~\u00a328-\u00a335",
-          "note": "Same bundled-kit logic applies regardless of budget tier."
-        }
-      ],
-      "totalEstimate": "~\u00a3440-\u00a3470",
-      "freshness": "Provisional",
-      "last_checked": "2026-07-06",
-      "sources": [
-        "Cross-referenced UK retail listings and 2026 desk/chair/monitor-arm/lighting buying-guide coverage \u2014 see category guides for detail."
-      ]
-    },
-    {
-      "name": "The Ultra-Tight Space",
-      "slug": "ultra-tight-space",
+      "name": "The Small-Space Home Office Corner",
+      "slug": "small-space-home-office",
       "roomSize": "BOX_ROOM",
       "priorities": [
-        "MINIMAL_FOOTPRINT",
+        "MULTIPURPOSE",
         "BUDGET_FIRST"
       ],
       "budget": "BUDGET",
       "tenancy": "RENTER",
-      "narrator": "For a room that genuinely can't fit a tower anywhere \u2014 built around a mini PC instead of assuming a full-size case.",
+      "narrator": "A desk corner that doesn't take over the room.",
       "items": [
         {
           "category": "Desk",
           "product": "IKEA LAGKAPTEN (top) + ADILS (legs)",
-          "price": "~\u00a355-\u00a365",
-          "note": "Flat surface area matters more than storage when the PC itself isn't taking up desk space."
-        },
-        {
-          "category": "Chair",
-          "product": "bigzzia Gaming Chair",
-          "price": "~\u00a345-\u00a350",
-          "note": "Minimal footprint, no footrest \u2014 matches the room."
-        },
-        {
-          "category": "Mini PC",
-          "product": "Geekom AX8 Pro",
-          "price": "Check current price \u2014 not confirmed in this research pass",
-          "note": "Genuinely small footprint with real gaming capability, not just a media-box PC. Flagging price as unconfirmed rather than guessing."
+          "price": "~£55-£65",
+          "note": "Flat, sturdy, no wasted bulk — 120cm fits most UK box rooms."
         },
         {
           "category": "Cable management",
           "product": "Budget mesh under-desk tray",
-          "price": "~\u00a315",
-          "note": "Even more valuable here since a mini PC means more small cables, not fewer."
+          "price": "~£15-£25",
+          "note": "Catches the power strip and bulk cabling in one go."
+        },
+        {
+          "category": "Lighting",
+          "product": "Argos Rayner Plug-In Wall Light",
+          "price": "~£19",
+          "note": "Doubles as task lighting for the desk corner — no electrician needed."
         }
       ],
-      "totalEstimate": "~\u00a3115-\u00a3130 plus mini PC (price to confirm)",
+      "totalEstimate": "~£89-£109",
       "freshness": "Provisional",
-      "last_checked": "2026-07-06",
+      "last_checked": "2026-07-07",
       "sources": [
-        "Cross-referenced UK retail listings and 2026 desk/chair/mini-PC buying-guide coverage \u2014 see category guides for detail. Mini PC pricing not independently confirmed this pass."
+        "Cross-referenced UK retail listings, July 2026 — see category guides for detail."
+      ]
+    },
+    {
+      "name": "The Blank Wall Fix",
+      "slug": "blank-wall-fix",
+      "roomSize": "STANDARD_ROOM",
+      "priorities": [
+        "AESTHETICS",
+        "RENTAL_SAFE"
+      ],
+      "budget": "ULTRA_BUDGET",
+      "tenancy": "RENTER",
+      "narrator": "For a room that just needs the walls to stop looking bare — zero permanent changes.",
+      "items": [
+        {
+          "category": "Wall decor",
+          "product": "Command Picture Hanging Extra Large Strips (Set of 10)",
+          "price": "~£13",
+          "note": "Holds up to 7.2kg, removes cleanly."
+        },
+        {
+          "category": "Wall decor",
+          "product": "No-drill adhesive floating shelf",
+          "price": "~£22-£33",
+          "note": "Adhesive-mounted, lightweight items only."
+        },
+        {
+          "category": "Soft furnishings",
+          "product": "IKEA GURLI cushion cover",
+          "price": "~£5",
+          "note": "Small budget left over goes further here than on anything else."
+        }
+      ],
+      "totalEstimate": "~£40-£51",
+      "freshness": "Provisional",
+      "last_checked": "2026-07-07",
+      "sources": [
+        "Cross-referenced UK retail listings, July 2026 — see category guides for detail."
       ]
     }
   ],
   "blankSlatePool": [
-    "box-room-starter",
-    "corner-maximiser",
-    "renter-friendly-all-rounder"
+    "renters-starter-kit",
+    "cosy-corner",
+    "blank-wall-fix"
   ]
 }

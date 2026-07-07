@@ -1,160 +1,152 @@
 {
-  "desks": {
-    "title": "Best budget gaming desks for small UK rooms",
-    "intro": "Every existing UK gaming-desk guide we found covers the products fine but treats \"small room\" as an afterthought bolted onto a generic top-10 list. This one starts from the actual constraint UK gamers have: box bedrooms, shared spaces, desks that need to double as a workspace.",
+  "storage": {
+    "title": "Best renter-friendly storage for small UK rooms",
+    "intro": "Storage in a rented room has one extra constraint every gaming-desk-style buying guide skips: it has to leave zero trace when you move out. Everything here works without a drill.",
     "sections": [
       {
-        "heading": "Best overall value: IKEA Utespelare \u2014 ~\u00a3129",
-        "body": "A proper gaming desk (not a repurposed office desk) sized sensibly for UK rooms, solid build quality at the price, widely stocked so it's easy to actually buy rather than waiting on a container ship."
+        "heading": "Best overall: SONGMICS Over-Door Organiser — ~£15-£21",
+        "body": "Hangs on any standard door, no drilling. Turns dead vertical space — the back of a door — into real storage, which matters more in a small room than almost any other single fix. Also available from ~£9.99 at The Range for a simpler version."
       },
       {
-        "heading": "Best true-budget option: IKEA LAGKAPTEN + ADILS \u2014 ~\u00a355-\u00a365",
-        "body": "Not marketed as a \"gaming desk\" at all, which is exactly why it works in a small room \u2014 flat, sturdy, no wasted RGB-branded bulk. The honest pick for anyone who wants surface area over aesthetics."
-      },
-      {
-        "heading": "Best for a corner/box room: HOMIDEC L-Shaped \u2014 ~\u00a379-\u00a399",
-        "body": "L-shaped desks use a room's corner instead of eating a whole wall, which matters more in a UK bedroom than in the sprawling US setups most gaming-desk content is written for."
-      },
-      {
-        "heading": "Best for storage-starved rooms: Coleshome \u2014 ~\u00a389-\u00a3119",
-        "body": "If the room has nowhere else to put headsets, controllers, or cables, this prioritises built-in storage over raw surface area."
-      },
-      {
-        "heading": "Worth calling out: ELEGANT Gaming Desk \u2014 ~\u00a368",
-        "body": "Budget RGB option if look matters as much as function \u2014 flagged honestly as style-over-substance rather than pretending it's the outright best pick."
+        "heading": "Best for wardrobes: IKEA SKUBB storage boxes — from £6 each, set of 6 for £9",
+        "body": "Collapse flat when empty, which matters for a tenancy that might end — you're not left with bulky boxes to dispose of when you move."
       },
       {
         "heading": "What we won't do",
-        "body": "We're not going to recommend a \"gaming desk\" purely because it has a cup holder and a headphone hook molded into the corner. Every pick above earns its place on actual dimensions, stability, and fit for a small room \u2014 not branding."
+        "body": "We won't recommend anything that needs drilling, screwing into a wall, or otherwise risks a deposit. If a storage solution needs a bracket, it's not going in this guide."
       }
     ],
     "sources": [
-      "Cross-referenced current UK retail listings and 2026 desk-buying-guide coverage across multiple outlets, not a single source."
+      "Cross-referenced current Amazon UK, The Range, and IKEA UK listings, July 2026."
     ],
-    "lastChecked": "2026-07-06",
-    "freshness": "Provisional"
-  },
-  "chairs": {
-    "title": "Best gaming chairs for small UK rooms",
-    "intro": "Most gaming chair guides assume a sprawling setup. In a UK box room, footprint and a folding footrest matter as much as ergonomics.",
-    "sections": [
-      {
-        "heading": "Best overall: Racingreat Ergonomic Gaming Chair \u2014 sub-\u00a355",
-        "body": "Compact seat and base footprint, no bulky footrest, adjustable seat height, reclining backrest, headrest pillow and lumbar cushion at the price."
-      },
-      {
-        "heading": "Best value with a footrest: Symino Gaming Chair",
-        "body": "Feature-rich with footrest and full lumbar support \u2014 the footrest folds away when not in use, which matters in a tight room."
-      },
-      {
-        "heading": "Best for the smallest bedrooms: bigzzia Gaming Chair \u2014 under \u00a350",
-        "body": "No footrest, which keeps both the price and the footprint down. The honest pick when the room simply won't take anything bigger."
-      },
-      {
-        "heading": "Best solid build under \u00a390: SONGMICS Racing Gaming Chair OBG073BH08",
-        "body": "The most solid construction found under \u00a390 in current UK comparisons."
-      }
-    ],
-    "sources": [
-      "Cross-referenced current UK retail listings and 2026 chair-buying-guide coverage across multiple outlets."
-    ],
-    "lastChecked": "2026-07-06",
-    "freshness": "Provisional"
-  },
-  "monitor-arms": {
-    "title": "Best monitor arms and cable management for small desks",
-    "intro": "On a desk under 120cm wide, a monitor arm frees more usable surface than almost any other single purchase.",
-    "sections": [
-      {
-        "heading": "Best overall: Ergotron LX \u2014 ~\u00a3130",
-        "body": "Smooth gas-spring movement, 25kg load capacity, fits monitors up to 34in. Cables route through channels in the arm secured by detachable cladding. The arm 90% of UK buyers should get."
-      },
-      {
-        "heading": "Design-conscious alternative: Herman Miller Flo Plus",
-        "body": "Ultra-clean appearance with cable channels integrated into the design, 12-year warranty. A premium pick, not a starting recommendation."
-      },
-      {
-        "heading": "If a full arm isn't in budget yet",
-        "body": "A cable tray, cable spine, and a monitor riser is often steadier than a heavy arm balanced on a lightweight desk anyway \u2014 worth doing in that order rather than stretching for the arm first."
-      }
-    ],
-    "sources": [
-      "Cross-referenced current UK retail listings and 2026 monitor-arm buying-guide coverage."
-    ],
-    "lastChecked": "2026-07-06",
-    "freshness": "Provisional"
-  },
-  "cable-management": {
-    "title": "Cable management for small desks",
-    "intro": "In a small room, trailing cables are the first thing you see walking in. This is the cheapest, highest-impact category on the whole list.",
-    "sections": [
-      {
-        "heading": "Best starting point: a single under-desk cable tray \u2014 ~\u00a315-\u00a325",
-        "body": "Budget mesh trays start around \u00a315; premium retractable versions run closer to \u00a325. This catches the power strip and bulk cabling in one go."
-      },
-      {
-        "heading": "Best value: a complete kit rather than piecing it together \u2014 ~\u00a328-\u00a335",
-        "body": "Buying a tray, ties, clips, and sleeves separately adds up to roughly \u00a346 in total; bundled kits covering the same ground typically run \u00a328-35."
-      },
-      {
-        "heading": "Worth adding once the basics are sorted",
-        "body": "Adhesive cable clips running down the desk leg to the floor socket \u2014 a few pounds, and the difference between \"tidy\" and \"actually tidy.\""
-      }
-    ],
-    "sources": [
-      "Cross-referenced current UK retail listings and 2026 cable-management comparison coverage."
-    ],
-    "lastChecked": "2026-07-06",
+    "lastChecked": "2026-07-07",
     "freshness": "Provisional"
   },
   "lighting": {
-    "title": "Desk and bias lighting for gaming setups",
-    "intro": "Bias lighting behind a monitor measurably reduces eye strain, separate from whatever aesthetic value RGB adds.",
+    "title": "Plug-in and no-hardwire lighting for renters",
+    "intro": "Most lighting guides assume you can rewire. Renters can't — so every pick here plugs into an existing socket or runs on battery power, no electrician required.",
     "sections": [
       {
-        "heading": "Best budget pick: RGBIC-style strip lights \u2014 ~\u00a315-\u00a328",
-        "body": "Enough for a bias-lighting effect behind a monitor without turning the whole room into a light show \u2014 useful in a small room where a fully-lit RGB setup can feel overwhelming rather than atmospheric."
+        "heading": "Best overall: Argos Rayner Plug-In Wall Light — ~£19",
+        "body": "Black or brass finish, plugs straight into an existing socket — mounts to the wall like a hardwired fixture but needs no electrical work at all."
       },
       {
-        "heading": "Best mid-range: Govee Strip Light 2 Pro \u2014 ~\u00a3100",
-        "body": "Wireless control, wide colour range, syncs with Corsair iCUE if the rest of the setup is Corsair gear. A \"once you know you want this hobby\" purchase, not a starting recommendation."
+        "heading": "Step-up pick: Dunelm Fulton Plug-In Wall Light — RRP ~£32",
+        "body": "Rustic pine finish, 1.8m cable. Often discounted in Dunelm sales — worth checking the live price before buying rather than assuming RRP."
       },
       {
-        "heading": "The actual useful bit, regardless of budget",
-        "body": "Bias lighting behind the monitor at roughly 300-500 lumens per metre measurably reduces eye strain by softening the contrast between a bright screen and a dark room."
+        "heading": "No socket nearby? Go battery",
+        "body": "Rechargeable LED wall lights and rechargeable battery bulbs skip the cord entirely — useful in a corner with no plug socket. Slightly more expensive per unit than plug-in, but zero visible cable."
+      },
+      {
+        "heading": "The one thing to plan for",
+        "body": "Plug-in lights have a visible cord. Running it behind furniture or using a cord cover is the difference between 'renter hack' and 'obviously renter hack.'"
       }
     ],
     "sources": [
-      "Cross-referenced current UK retail listings and 2026 desk-lighting buying-guide coverage."
+      "Cross-referenced current Argos and Dunelm UK listings, July 2026."
     ],
-    "lastChecked": "2026-07-06",
+    "lastChecked": "2026-07-07",
     "freshness": "Provisional"
   },
-  "mini-pcs": {
-    "title": "Best mini PCs for tight rooms",
-    "intro": "This category moves fast \u2014 mini PC pricing and specs shift with component cycles, so treat this as a starting shortlist to check current pricing against, not a fixed table.",
+  "soft-furnishings": {
+    "title": "Cushions, throws and rugs that do the most for renters",
+    "intro": "Soft furnishings are the highest-impact, lowest-risk category on this whole site — nothing here touches a wall or a landlord's paintwork.",
     "sections": [
       {
-        "heading": "Best overall for a small room: Geekom AX8 Pro",
-        "body": "Genuinely small footprint, real gaming capability (not just a media-box PC pretending to game), sensible price for what it does."
+        "heading": "Best cheap swap: IKEA GURLI cushion covers — £5 (50x50cm) / £12 (65x65cm)",
+        "body": "The cheapest single change that actually alters how a room feels. Three to five cushions is the usual sweet spot for a small sofa — more than that starts eating seating space."
       },
       {
-        "heading": "Step-up option: GEEKOM A9 Max",
-        "body": "Higher-end components in a still-compact chassis; handles popular titles like Fortnite, Valorant, and FIFA-style games comfortably at 1080p. Worth it if the room genuinely can't fit a tower."
+        "heading": "Rugs: IKEA TIPHEDE runner ~£15, KNARDRUP ~£19, STOENSE range under £40",
+        "body": "Get the size right before the style — a rug that 'floats' as an island between furniture makes a small room look smaller, not bigger. Anchor it under at least the front legs of the main seating."
       },
       {
-        "heading": "Honest caution \u2014 budget option: Blackview MP200",
-        "body": "Good value for general use, but flagged plainly: no dedicated graphics card and weak cooling means it will disappoint anyone expecting real gaming performance."
+        "heading": "Throws: Dunelm chunky knit, from ~£10 in sales",
+        "body": "Price moves around a lot with Dunelm's sales cycle, so treat this as a starting point and check the live price. Texture layering — mixing knit, velvet, and linen — is the trend doing most of the work in 2026 living-room guides."
       },
       {
-        "heading": "Premium: Corsair One i500",
-        "body": "For someone with real budget and a genuine small-space constraint, not a compromise pick."
+        "heading": "What we look for",
+        "body": "Machine washable, always — rentals mean less control over spills and previous-tenant wear than a room you own outright."
       }
     ],
     "sources": [
-      "Cross-referenced current UK/US retail listings and 2026 mini-PC buying-guide coverage. Specific pricing changes fast in this category \u2014 always check live price."
+      "Cross-referenced current IKEA UK and Dunelm listings, July 2026."
     ],
-    "lastChecked": "2026-07-06",
+    "lastChecked": "2026-07-07",
+    "freshness": "Provisional"
+  },
+  "wall-decor": {
+    "title": "No-drill wall décor and shelving for rented rooms",
+    "intro": "This is the category renters worry about most — bare walls, no permission to drill, and a deposit on the line. Adhesive strips and shelves genuinely hold real weight, within limits.",
+    "sections": [
+      {
+        "heading": "Best for hanging art: Command Picture Hanging Extra Large Strips (Set of 10) — ~£13",
+        "body": "Large strips hold up to 7.2kg; Command's small and medium strips hold 1.8kg and 5.4kg respectively — match the strip size to the frame, not just the biggest pack available. Removes cleanly with no holes."
+      },
+      {
+        "heading": "Best for shelving: no-drill adhesive floating shelf — from ~£21.79 (RRP ~£33)",
+        "body": "Adhesive-mounted, no bracket or drilling. Only suitable for genuinely lightweight items — books and solid ornaments belong on a drilled shelf, not this one."
+      },
+      {
+        "heading": "The honest caveat",
+        "body": "Adhesive strips can occasionally pull paint off on removal, particularly on older or poorly-painted walls. Test on a hidden patch first if the wall's paint job looks fragile."
+      }
+    ],
+    "sources": [
+      "Cross-referenced current Argos and Amazon UK listings, July 2026."
+    ],
+    "lastChecked": "2026-07-07",
+    "freshness": "Provisional"
+  },
+  "small-furniture": {
+    "title": "Multi-use furniture for small and shared UK rooms",
+    "intro": "In a small room, floor space is the actual constraint, not budget. Furniture that does two jobs is worth more than furniture that does one job cheaply.",
+    "sections": [
+      {
+        "heading": "Best pound-for-pound buy: Dunelm storage ottoman — ~£32-£35",
+        "body": "Doubles as seating, a coffee table, and hidden storage for bedding or shoes all in one piece — the single best multi-use purchase in this category."
+      },
+      {
+        "heading": "Wall-mounted drop-leaf table: IKEA NORBERG range — price varies significantly by size and retailer",
+        "body": "Folds flat against the wall when not in use, useful for a tiny kitchen or a fold-away desk. Pricing on this one genuinely varies a lot between IKEA direct and third-party resellers — check IKEA's own listing before buying anywhere else."
+      },
+      {
+        "heading": "What we look for",
+        "body": "Anything that serves two purposes — sleep and storage, seating and storage, dining and display — beats a single-purpose piece of the same price."
+      }
+    ],
+    "sources": [
+      "Cross-referenced current Dunelm and IKEA UK listings, July 2026."
+    ],
+    "lastChecked": "2026-07-07",
+    "freshness": "Provisional"
+  },
+  "desk-workspace": {
+    "title": "A small desk corner, honestly",
+    "intro": "This site started as a gaming-desk guide before broadening into general small-space decor. The desk research underneath was always just small-furniture research — here it is without the gaming framing.",
+    "sections": [
+      {
+        "heading": "Best value: IKEA LAGKAPTEN + ADILS — ~£55-£65",
+        "body": "Flat, sturdy, no wasted bulk. At 120cm it fits most UK box rooms and works equally well as a desk or a dressing table."
+      },
+      {
+        "heading": "Best for a corner: HOMIDEC L-Shaped — ~£79-£99",
+        "body": "Uses a room's corner instead of eating a whole wall — more usable surface per square foot of room than a straight desk."
+      },
+      {
+        "heading": "Worth adding once the basics are sorted: a monitor arm — ~£130 (Ergotron LX)",
+        "body": "On a desk under 120cm wide, a monitor arm frees more usable surface than almost any other single purchase — not a starting recommendation, but worth it once the desk and chair are settled."
+      },
+      {
+        "heading": "Cable management — ~£15-£35",
+        "body": "A single mesh under-desk tray starts around £15; a bundled kit with ties, clips, and sleeves runs £28-35. Cheapest, highest-impact fix in the whole category."
+      }
+    ],
+    "sources": [
+      "Cross-referenced current UK retail listings, July 2026."
+    ],
+    "lastChecked": "2026-07-07",
     "freshness": "Provisional"
   }
 }

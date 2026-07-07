@@ -1,0 +1,40 @@
+{
+  "lastChecked": "2026-07-07",
+  "freshness": "Provisional",
+  "intro": "Refreshed regularly rather than written once and left to go stale. This isn't a live sales-rank feed (Amazon's own bestseller pages block automated checking) — it's a periodic pass across UK retailer bestsellers, trend coverage, and Amazon's own rankings where visible, compiled honestly rather than scraped.",
+  "items": [
+    {
+      "trend": "Texture layering over pattern",
+      "why": "The dominant 2026 living-room trend across UK interiors coverage — mixing chunky knit, velvet, and bouclé does more for a small room than a single patterned statement piece.",
+      "product": "Dunelm chunky knit throw + IKEA GURLI cushion covers",
+      "price": "~£15-£30 combined",
+      "source": "Cross-referenced UK interiors trend coverage, July 2026."
+    },
+    {
+      "trend": "Warm neutrals replacing cool grey",
+      "why": "Mushroom, soft beige, and warm taupe tones are displacing the cool-grey palette that dominated the last few years — shows up consistently across current UK living-room roundups.",
+      "product": "Look for throws, rugs, and cushion covers in warm neutral tones rather than grey when restocking soft furnishings",
+      "price": "Varies by piece",
+      "source": "Cross-referenced UK interiors trend coverage, July 2026."
+    },
+    {
+      "trend": "No-drill wall solutions, still rising",
+      "why": "Command-strip and adhesive-shelf search interest keeps climbing as more of the UK rents long-term — not a fad, a structural shift in who's decorating.",
+      "product": "Command Picture Hanging Extra Large Strips (Set of 10)",
+      "price": "~£13",
+      "source": "Cross-referenced Argos UK listing and renter-decor coverage, July 2026."
+    },
+    {
+      "trend": "Multi-use furniture in small flats",
+      "why": "Storage ottomans and fold-away tables are the most consistently recommended space-saving buy across current small-flat furniture guides — doing two jobs beats doing one job cheaply.",
+      "product": "Dunelm storage ottoman",
+      "price": "~£32-£35",
+      "source": "Cross-referenced Dunelm UK listing and space-saving furniture coverage, July 2026."
+    }
+  ],
+  "sources": [
+    "Amazon UK Movers & Shakers (Home & Garden) where accessible",
+    "Dunelm, Argos, and IKEA UK current listings",
+    "Cross-referenced UK interiors trend coverage, July 2026"
+  ]
+}
