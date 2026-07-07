@@ -30,12 +30,22 @@ function catIconBadge(slug) {
   return '<span class="class-icon-badge">' + categoryIcon(slug, 20) + '</span>';
 }
 
+function productCell(item) {
+  const thumb = item.image
+    ? '<img class="product-thumb" src="' + item.image + '" alt="' + item.product + '" loading="lazy">'
+    : '<span class="product-thumb product-thumb-fallback"></span>';
+  const name = item.url
+    ? '<a href="' + item.url + '" target="_blank" rel="noopener">' + item.product + '</a>'
+    : item.product;
+  return '<div class="product-cell">' + thumb + '<span>' + name + '</span></div>';
+}
+
 function setupPage(s) {
   const itemRows = s.items.map(function (item) {
     return [
       '<tr>',
       '<td class="tier-cell">' + item.category + '</td>',
-      '<td>' + item.product + '</td>',
+      '<td>' + productCell(item) + '</td>',
       '<td class="meta">' + item.price + '</td>',
       '</tr>',
     ].join('');
@@ -98,11 +108,19 @@ function categoryPage(slug) {
     return '<h2>' + s.heading + '</h2>\n<p class="tagline">' + s.body + '</p>';
   }).join('\n');
 
+  const linksBlock = (c.productLinks || []).map(function (l) {
+    const thumb = l.image
+      ? '<img class="product-thumb" src="' + l.image + '" alt="' + l.label + '" loading="lazy">'
+      : '<span class="product-thumb product-thumb-fallback"></span>';
+    return '<a class="product-link-card" href="' + l.url + '" target="_blank" rel="noopener">' + thumb + '<span>' + l.label + '</span></a>';
+  }).join('\n');
+
   const body = [
     '<p><a href="/guides.html">&larr; All guides</a></p>',
     '<h1>' + catIconBadge(slug) + ' ' + c.title + '</h1>',
     '<p class="tagline">' + c.intro + '</p>',
     sections,
+    linksBlock ? '<div class="product-link-grid">' + linksBlock + '</div>' : '',
     '<div class="reveal-card">',
     '  ' + freshnessBadge(c.freshness) + '<p class="core" style="margin-top:0.8rem;"><strong>Sources:</strong> ' + c.sources.join(' &middot; ') + '</p>',
     '</div>',

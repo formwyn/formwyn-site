@@ -20,7 +20,19 @@
       "Cross-referenced current Amazon UK, The Range, and IKEA UK listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "SONGMICS Over-Door Organiser",
+        "url": "https://www.amazon.co.uk/SONGMICS-Over-Door-Organiser-Practical-Childrens/dp/B07PRG27MX",
+        "image": null
+      },
+      {
+        "label": "IKEA SKUBB storage boxes",
+        "url": "https://www.ikea.com/gb/en/search/products/?q=skubb",
+        "image": null
+      }
+    ]
   },
   "lighting": {
     "title": "Plug-in and no-hardwire lighting for renters",
@@ -47,7 +59,19 @@
       "Cross-referenced current Argos and Dunelm UK listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "Argos Rayner Plug-In Wall Light",
+        "url": "https://www.argos.co.uk/product/1979288",
+        "image": "https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&w=620&h=620"
+      },
+      {
+        "label": "Dunelm Fulton Plug-In Wall Light",
+        "url": "https://www.dunelm.com/product/fulton-easy-fit-plug-in-wall-light-1000182782",
+        "image": "https://images.dunelm.com/30713776.jpg?$standardplayerdefault$&img404=noimagedefault"
+      }
+    ]
   },
   "soft-furnishings": {
     "title": "Cushions, throws and rugs that do the most for renters",
@@ -74,7 +98,24 @@
       "Cross-referenced current IKEA UK and Dunelm listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "IKEA GURLI cushion cover",
+        "url": "https://www.ikea.com/gb/en/search/products/?q=gurli%20cushion%20cover",
+        "image": null
+      },
+      {
+        "label": "IKEA TIPHEDE rug",
+        "url": "https://www.ikea.com/gb/en/search/products/?q=tiphede%20rug",
+        "image": null
+      },
+      {
+        "label": "Dunelm chunky knit throw",
+        "url": "https://www.dunelm.com/product/chunky-knit-recycled-throw-130cm-x-170cm-1000221719",
+        "image": "https://images.dunelm.com/30826699.jpg?$standardplayerdefault$&img404=noimagedefault"
+      }
+    ]
   },
   "wall-decor": {
     "title": "No-drill wall décor and shelving for rented rooms",
@@ -97,14 +138,26 @@
       "Cross-referenced current Argos and Amazon UK listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "Command Picture Hanging Extra Large Strips",
+        "url": "https://www.argos.co.uk/product/7809527",
+        "image": "https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&w=620&h=620"
+      },
+      {
+        "label": "No-drill adhesive floating shelf",
+        "url": "https://www.amazon.co.uk/Toski-Drilling-Required-Self-Adhesive-Floating/dp/B0BYJPRJRR",
+        "image": null
+      }
+    ]
   },
   "small-furniture": {
     "title": "Multi-use furniture for small and shared UK rooms",
     "intro": "In a small room, floor space is the actual constraint, not budget. Furniture that does two jobs is worth more than furniture that does one job cheaply.",
     "sections": [
       {
-        "heading": "Best pound-for-pound buy: Dunelm storage ottoman — ~£32-£35",
+        "heading": "Best pound-for-pound buy: Dunelm storage ottoman — ~£20",
         "body": "Doubles as seating, a coffee table, and hidden storage for bedding or shoes all in one piece — the single best multi-use purchase in this category."
       },
       {
@@ -120,7 +173,19 @@
       "Cross-referenced current Dunelm and IKEA UK listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "Dunelm storage ottoman",
+        "url": "https://www.dunelm.com/product/faux-linen-rectangular-ottoman-1000214113",
+        "image": "https://images.dunelm.com/30723929.jpg?$standardplayerdefault$&img404=noimagedefault"
+      },
+      {
+        "label": "IKEA NORBERG wall-mounted drop-leaf table",
+        "url": "https://www.ikea.com/gb/en/search/products/?q=norberg",
+        "image": null
+      }
+    ]
   },
   "desk-workspace": {
     "title": "A small desk corner, honestly",
@@ -147,6 +212,28 @@
       "Cross-referenced current UK retail listings, July 2026."
     ],
     "lastChecked": "2026-07-07",
-    "freshness": "Provisional"
+    "freshness": "Provisional",
+    "productLinks": [
+      {
+        "label": "IKEA LAGKAPTEN + ADILS",
+        "url": "https://www.ikea.com/gb/en/search/products/?q=lagkapten%20adils",
+        "image": null
+      },
+      {
+        "label": "HOMIDEC L-Shaped desk",
+        "url": "https://www.amazon.co.uk/HOMIDEC-Bookshelf-Reversible-Workstation-PL23051503/dp/B0C58S1Y4C",
+        "image": null
+      },
+      {
+        "label": "Ergotron LX monitor arm",
+        "url": "https://www.amazon.co.uk/Ergotron-LX-articulating-Technology-aluminium/dp/B07Q8TJ2KL",
+        "image": null
+      },
+      {
+        "label": "Under-desk cable management tray",
+        "url": "https://www.amazon.co.uk/Under-Cable-Management-Drill-Organizers/dp/B0DCFNSVDN",
+        "image": null
+      }
+    ]
   }
 }

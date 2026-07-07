@@ -393,6 +393,58 @@ p.freshness.Provisional { color: var(--provisional); }
 .freshness-table td.meta { color: var(--text-faint); font-size: 0.8rem; }
 .freshness-table td.tier-cell { padding-left: 0.85rem; font-weight: 600; }
 
+/* ---------- Product links & images ---------- */
+
+.product-cell { display: flex; align-items: center; gap: 0.65rem; }
+
+.product-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  flex-shrink: 0;
+}
+
+.product-thumb-fallback {
+  display: inline-block;
+  background: rgba(107, 124, 79, 0.12);
+}
+
+.product-cell a { text-decoration: underline; text-decoration-color: rgba(193, 85, 58, 0.35); }
+.product-cell a:hover { text-decoration-color: var(--terracotta); }
+
+.product-link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.product-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.9rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.product-link-card:hover { border-color: var(--terracotta); }
+
+.product-link-card .product-thumb {
+  width: 100%;
+  height: 90px;
+  border-radius: 10px;
+}
+
 /* ---------- Footer ---------- */
 
 footer.site {

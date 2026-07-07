@@ -16,25 +16,33 @@
           "category": "Storage",
           "product": "SONGMICS Over-Door Organiser",
           "price": "~£15-£21",
-          "note": "No drilling — turns unused door space into actual storage."
+          "note": "No drilling — turns unused door space into actual storage.",
+          "url": "https://www.amazon.co.uk/SONGMICS-Over-Door-Organiser-Practical-Childrens/dp/B07PRG27MX",
+          "image": null
         },
         {
           "category": "Wall decor",
           "product": "Command Picture Hanging Extra Large Strips (Set of 10)",
           "price": "~£13",
-          "note": "Holds up to 7.2kg — the honest way to hang art without losing your deposit."
+          "note": "Holds up to 7.2kg — the honest way to hang art without losing your deposit.",
+          "url": "https://www.argos.co.uk/product/7809527",
+          "image": "https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&w=620&h=620"
         },
         {
           "category": "Soft furnishings",
           "product": "IKEA GURLI cushion covers x2",
           "price": "~£10",
-          "note": "The cheapest single swap that actually changes how a room feels."
+          "note": "The cheapest single swap that actually changes how a room feels.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=gurli%20cushion%20cover",
+          "image": null
         },
         {
           "category": "Storage",
           "product": "IKEA SKUBB storage boxes (set of 6)",
           "price": "~£9",
-          "note": "Collapse flat when not needed — useful for a tenancy that might end."
+          "note": "Collapse flat when not needed — useful for a tenancy that might end.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=skubb",
+          "image": null
         }
       ],
       "totalEstimate": "~£47-£53",
@@ -52,7 +60,7 @@
         "AESTHETICS",
         "COMFORT"
       ],
-      "budget": "BUDGET",
+      "budget": "MID",
       "tenancy": "RENTER",
       "narrator": "Layering, not renovating — the small stuff that actually makes a room feel warm.",
       "items": [
@@ -60,28 +68,36 @@
           "category": "Lighting",
           "product": "Argos Rayner Plug-In Wall Light",
           "price": "~£19",
-          "note": "No electrician needed — plugs straight into an existing socket."
+          "note": "No electrician needed — plugs straight into an existing socket.",
+          "url": "https://www.argos.co.uk/product/1979288",
+          "image": "https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&w=620&h=620"
         },
         {
           "category": "Soft furnishings",
           "product": "IKEA TIPHEDE or KNARDRUP small rug",
           "price": "~£15-£19",
-          "note": "Big enough to anchor the seating area — a rug that 'floats' between furniture makes a room look smaller, not bigger."
+          "note": "Big enough to anchor the seating area — a rug that 'floats' between furniture makes a room look smaller, not bigger.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=tiphede%20rug",
+          "image": null
         },
         {
           "category": "Soft furnishings",
           "product": "Dunelm chunky knit throw",
-          "price": "~£10-£20 (check live price)",
-          "note": "Texture over pattern — the layering trick most 2026 living-room guides lean on."
+          "price": "~£49",
+          "note": "Pricier than expected for this size, but it's the real current price at Dunelm — texture over pattern is the layering trick most 2026 guides lean on.",
+          "url": "https://www.dunelm.com/product/chunky-knit-recycled-throw-130cm-x-170cm-1000221719",
+          "image": "https://images.dunelm.com/30826699.jpg?$standardplayerdefault$&img404=noimagedefault"
         },
         {
           "category": "Soft furnishings",
           "product": "IKEA GURLI cushion covers x2",
           "price": "~£10",
-          "note": "Three to five cushions is the sweet spot before it starts eating seating space."
+          "note": "Three to five cushions is the sweet spot before it starts eating seating space.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=gurli%20cushion%20cover",
+          "image": null
         }
       ],
-      "totalEstimate": "~£54-£68",
+      "totalEstimate": "~£93-£97",
       "freshness": "Provisional",
       "last_checked": "2026-07-07",
       "sources": [
@@ -103,29 +119,37 @@
         {
           "category": "Small furniture",
           "product": "Dunelm storage ottoman",
-          "price": "~£32-£35",
-          "note": "Doubles as seating, coffee table, and storage in one — the best pound-for-pound multi-use buy."
+          "price": "~£20",
+          "note": "Doubles as seating, coffee table, and storage in one — the best pound-for-pound multi-use buy.",
+          "url": "https://www.dunelm.com/product/faux-linen-rectangular-ottoman-1000214113",
+          "image": "https://images.dunelm.com/30723929.jpg?$standardplayerdefault$&img404=noimagedefault"
         },
         {
           "category": "Storage",
           "product": "SONGMICS Over-Door Organiser",
           "price": "~£15-£21",
-          "note": "No drilling required."
+          "note": "No drilling required.",
+          "url": "https://www.amazon.co.uk/SONGMICS-Over-Door-Organiser-Practical-Childrens/dp/B07PRG27MX",
+          "image": null
         },
         {
           "category": "Wall decor",
           "product": "No-drill adhesive floating shelf",
           "price": "~£22-£33",
-          "note": "Adhesive-mounted — no bracket, no drilling. Lightweight items only."
+          "note": "Adhesive-mounted — no bracket, no drilling. Lightweight items only.",
+          "url": "https://www.amazon.co.uk/Toski-Drilling-Required-Self-Adhesive-Floating/dp/B0BYJPRJRR",
+          "image": null
         },
         {
           "category": "Storage",
           "product": "IKEA SKUBB storage boxes (set of 6)",
           "price": "~£9",
-          "note": "Collapse flat when empty."
+          "note": "Collapse flat when empty.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=skubb",
+          "image": null
         }
       ],
-      "totalEstimate": "~£78-£98",
+      "totalEstimate": "~£66-£86",
       "freshness": "Provisional",
       "last_checked": "2026-07-07",
       "sources": [
@@ -148,19 +172,25 @@
           "category": "Desk",
           "product": "IKEA LAGKAPTEN (top) + ADILS (legs)",
           "price": "~£55-£65",
-          "note": "Flat, sturdy, no wasted bulk — 120cm fits most UK box rooms."
+          "note": "Flat, sturdy, no wasted bulk — 120cm fits most UK box rooms.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=lagkapten%20adils",
+          "image": null
         },
         {
           "category": "Cable management",
           "product": "Budget mesh under-desk tray",
           "price": "~£15-£25",
-          "note": "Catches the power strip and bulk cabling in one go."
+          "note": "Catches the power strip and bulk cabling in one go.",
+          "url": "https://www.amazon.co.uk/Under-Cable-Management-Drill-Organizers/dp/B0DCFNSVDN",
+          "image": null
         },
         {
           "category": "Lighting",
           "product": "Argos Rayner Plug-In Wall Light",
           "price": "~£19",
-          "note": "Doubles as task lighting for the desk corner — no electrician needed."
+          "note": "Doubles as task lighting for the desk corner — no electrician needed.",
+          "url": "https://www.argos.co.uk/product/1979288",
+          "image": "https://media.4rgos.it/s/Argos/1979288_R_SET?$Main768$&w=620&h=620"
         }
       ],
       "totalEstimate": "~£89-£109",
@@ -186,19 +216,25 @@
           "category": "Wall decor",
           "product": "Command Picture Hanging Extra Large Strips (Set of 10)",
           "price": "~£13",
-          "note": "Holds up to 7.2kg, removes cleanly."
+          "note": "Holds up to 7.2kg, removes cleanly.",
+          "url": "https://www.argos.co.uk/product/7809527",
+          "image": "https://media.4rgos.it/s/Argos/7809527_R_SET?$Main768$&w=620&h=620"
         },
         {
           "category": "Wall decor",
           "product": "No-drill adhesive floating shelf",
           "price": "~£22-£33",
-          "note": "Adhesive-mounted, lightweight items only."
+          "note": "Adhesive-mounted, lightweight items only.",
+          "url": "https://www.amazon.co.uk/Toski-Drilling-Required-Self-Adhesive-Floating/dp/B0BYJPRJRR",
+          "image": null
         },
         {
           "category": "Soft furnishings",
           "product": "IKEA GURLI cushion cover",
           "price": "~£5",
-          "note": "Small budget left over goes further here than on anything else."
+          "note": "Small budget left over goes further here than on anything else.",
+          "url": "https://www.ikea.com/gb/en/search/products/?q=gurli%20cushion%20cover",
+          "image": null
         }
       ],
       "totalEstimate": "~£40-£51",

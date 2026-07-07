@@ -24,13 +24,21 @@ function pushRecent(name) {
 
 function renderReveal(container, data) {
   const { reveal, setup } = data;
-  const itemRows = (reveal.items || []).map((item) => `
+  const itemRows = (reveal.items || []).map((item) => {
+    const thumb = item.image
+      ? `<img class="product-thumb" src="${item.image}" alt="${item.product}" loading="lazy">`
+      : `<span class="product-thumb product-thumb-fallback"></span>`;
+    const name = item.url
+      ? `<a href="${item.url}" target="_blank" rel="noopener">${item.product}</a>`
+      : item.product;
+    return `
     <tr>
       <td>${item.category}</td>
-      <td>${item.product}</td>
+      <td><div class="product-cell">${thumb}<span>${name}</span></div></td>
       <td>${item.price}</td>
     </tr>
-  `).join('');
+  `;
+  }).join('');
 
   container.innerHTML = `
     <div class="reveal-card">
