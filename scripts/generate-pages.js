@@ -73,13 +73,13 @@ function setupsIndexPage() {
 
   const body = [
     '<h1>All setups</h1>',
-    '<p class="tagline">Complete, real-priced gaming setup bundles for small UK rooms - every pick sourced and freshness-tagged, same rule as everywhere else on Emberlo.</p>',
+    '<p class="tagline">Complete, real-priced gaming setup bundles for small UK rooms - every pick sourced and freshness-tagged, same rule as everywhere else on emberlo.</p>',
     '<ul class="class-grid build-grid">' + items + '</ul>',
   ].join('\n');
 
   return pageShell({
     title: 'All setups',
-    description: 'All Emberlo gaming setup bundles for small UK rooms.',
+    description: 'All emberlo gaming setup bundles for small UK rooms.',
     active: 'setups',
     body: body,
   });
@@ -104,7 +104,7 @@ function categoryPage(slug) {
 
   return pageShell({
     title: c.title,
-    description: c.title + ' - a sourced Emberlo buying guide, last checked ' + c.lastChecked + '.',
+    description: c.title + ' - a sourced emberlo buying guide, last checked ' + c.lastChecked + '.',
     active: 'guides',
     body: body,
   });
@@ -126,7 +126,7 @@ function guidesIndexPage() {
 
   return pageShell({
     title: 'Guides',
-    description: 'Emberlo gaming setup guides - desks, chairs, monitor arms, cable management, lighting, mini PCs.',
+    description: 'emberlo gaming setup guides - desks, chairs, monitor arms, cable management, lighting, mini PCs.',
     active: 'guides',
     body: body,
   });
@@ -144,7 +144,7 @@ function realSetupsPage() {
 
   return pageShell({
     title: 'Real setups',
-    description: 'Genuine reader-submitted small-room gaming setups on Emberlo.',
+    description: 'Genuine reader-submitted small-room gaming setups on emberlo.',
     active: 'real-setups',
     body: body,
   });
@@ -174,7 +174,7 @@ function patchTrackerPage() {
 
   const body = [
     '<h1>Data freshness &amp; patch tracker</h1>',
-    '<p class="tagline">Every setup and guide on Emberlo carries a freshness state instead of a silent assumption that prices are still current. Prices in this space move often - always confirm live price at the retailer before buying.</p>',
+    '<p class="tagline">Every setup and guide on emberlo carries a freshness state instead of a silent assumption that prices are still current. Prices in this space move often - always confirm live price at the retailer before buying.</p>',
     '<h2>Setup bundles</h2>',
     '<table class="freshness-table">',
     '<thead><tr><th>Setup</th><th>Status</th><th>Last checked</th></tr></thead>',
@@ -182,7 +182,7 @@ function patchTrackerPage() {
     '</table>',
     catRows ? '<h2>Guides</h2><table class="freshness-table"><thead><tr><th>Guide</th><th>Status</th><th>Last checked</th></tr></thead><tbody>' + catRows + '</tbody></table>' : '',
   ].join('\n');
-  return pageShell({ title: 'Data freshness & patch tracker', description: 'Freshness status for every Emberlo setup bundle and guide.', active: 'home', body });
+  return pageShell({ title: 'Data freshness & patch tracker', description: 'Freshness status for every emberlo setup bundle and guide.', active: 'home', body });
 }
 
 fs.mkdirSync(path.join(root, 'setups'), { recursive: true });
